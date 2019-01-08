@@ -26,5 +26,16 @@ namespace RK
         {
             Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            groupBox3.Visible = true;
+            groupBox4.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
