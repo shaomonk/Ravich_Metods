@@ -79,6 +79,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,22 +109,23 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 132);
+            this.groupBox1.Location = new System.Drawing.Point(12, 106);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 229);
+            this.groupBox1.Size = new System.Drawing.Size(236, 255);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Тип топлива и котлов";
+            this.groupBox1.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 39);
+            this.label1.Size = new System.Drawing.Size(374, 39);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Данная программа предназначается для рассчета режимно-наладочных\r\nиспытаний котло" +
-    "агрегата и определения его номинальных и рассчетных\r\nпараметров";
+            this.label1.Text = "Данная программа предназначается для расчета режимно-наладочных\r\nиспытаний котлоа" +
+    "грегата и определения его номинальных и расчетных\r\nпараметров";
             // 
             // comboBox1
             // 
@@ -160,7 +163,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 367);
+            this.button1.Location = new System.Drawing.Point(12, 393);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(236, 39);
             this.button1.TabIndex = 3;
@@ -169,12 +172,14 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(254, 367);
+            this.button2.Location = new System.Drawing.Point(254, 393);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(431, 39);
+            this.button2.Size = new System.Drawing.Size(219, 39);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Рассчет";
+            this.button2.Text = "Расчет";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox3
             // 
@@ -216,7 +221,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 31);
             this.button3.TabIndex = 9;
-            this.button3.Text = "Вывести_БД";
+            this.button3.Text = "Вывести БД";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -248,7 +253,8 @@
             // 
             this.рассчетToolStripMenuItem.Name = "рассчетToolStripMenuItem";
             this.рассчетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.рассчетToolStripMenuItem.Text = "Рассчет";
+            this.рассчетToolStripMenuItem.Text = "Расчет";
+            this.рассчетToolStripMenuItem.Click += new System.EventHandler(this.рассчетToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
@@ -302,7 +308,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(108, 178);
+            this.button4.Location = new System.Drawing.Point(108, 204);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 32);
             this.button4.TabIndex = 4;
@@ -320,9 +326,9 @@
             this.groupBox3.Controls.Add(this.textBox3);
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Location = new System.Drawing.Point(254, 131);
+            this.groupBox3.Location = new System.Drawing.Point(254, 106);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(219, 230);
+            this.groupBox3.Size = new System.Drawing.Size(219, 255);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Константы";
@@ -373,7 +379,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 31);
+            this.label6.Location = new System.Drawing.Point(6, 31);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 13);
             this.label6.TabIndex = 3;
@@ -382,7 +388,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 62);
+            this.label7.Location = new System.Drawing.Point(6, 61);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 26);
             this.label7.TabIndex = 4;
@@ -391,7 +397,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 101);
+            this.label8.Location = new System.Drawing.Point(6, 104);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 26);
             this.label8.TabIndex = 5;
@@ -444,9 +450,9 @@
             this.groupBox4.Controls.Add(this.textBox8);
             this.groupBox4.Controls.Add(this.textBox7);
             this.groupBox4.Controls.Add(this.textBox6);
-            this.groupBox4.Location = new System.Drawing.Point(479, 132);
+            this.groupBox4.Location = new System.Drawing.Point(479, 106);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(206, 229);
+            this.groupBox4.Size = new System.Drawing.Size(206, 255);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Переменные";
@@ -540,11 +546,33 @@
             this.vScrollBar1.Size = new System.Drawing.Size(17, 435);
             this.vScrollBar1.TabIndex = 14;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(479, 393);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(206, 38);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Расчет на другой нагрузке";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(691, 392);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(195, 39);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "Вывести отчет";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
+            // 
             // Form_RK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 459);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -626,6 +654,8 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 
