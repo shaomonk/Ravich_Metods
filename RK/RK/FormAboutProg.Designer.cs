@@ -41,6 +41,7 @@
             this.btnOk.TabIndex = 0;
             this.btnOk.Text = "Отмена";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // label1
             // 
