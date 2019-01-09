@@ -52,6 +52,25 @@ namespace RK
             groupBox1.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
+            
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+            groupBox3.Visible = true;
+            groupBox4.Visible = true;
+            
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+     
+            textBox8.Clear();
+            textBox9.Clear();
+            textBox10.Clear();
+        }
+
+        
     }
 }
