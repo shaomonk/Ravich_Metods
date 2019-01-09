@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Все необходимые данные для расчетов(константы, переменные...) берутсья
+из базы данных. Она представляет собой совокупность таблиц по топливам, 
+в которой отображена вся информация по параметрам и тепловым характеристикам
+топлив, и котлоагрегатам(их конструктивные особенности, поверхности нагрева,
+номинальной мощности и теплопроизводительности).</value>
+  </data>
 </root>
