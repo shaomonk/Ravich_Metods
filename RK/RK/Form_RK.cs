@@ -17,6 +17,12 @@ namespace RK
             InitializeComponent();
         }
 
+        void ShowChildForm(Form_RK form)
+        {
+            form.MdiParent = this;
+            form.Show();
+        }
+
         private void вывестиБДToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox2.Visible = true;
@@ -31,7 +37,7 @@ namespace RK
         {
             groupBox3.Visible = true;
             groupBox4.Visible = true;
-            button2.Visible = true;
+            btnRas.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -47,8 +53,8 @@ namespace RK
 
         private void button2_Click(object sender, EventArgs e)
         {
-            button5.Visible = true;
-            button6.Visible = true;
+            btnRetry.Visible = true;
+            btnReport.Visible = true;
             groupBox1.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
@@ -61,16 +67,35 @@ namespace RK
             groupBox3.Visible = true;
             groupBox4.Visible = true;
             
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
+            tbQ.Clear();
+            tbPrk.Clear();
+            tbPb.Clear();
+            tbPair.Clear();
      
-            textBox8.Clear();
-            textBox9.Clear();
-            textBox10.Clear();
+            tbTD.Clear();
+            tbTP.Clear();
+            tbYgaz.Clear();
         }
 
-        
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+         
+            Form_RK FormSpravka = new Form_RK();
+            FormSpravka.ShowDialog();
+            
+
+        }
+
+        private void программаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_RK FormAboutProg = new Form_RK();
+            FormAboutProg.ShowDialog();
+        }
+
+        private void поискПоБДToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_RK FormAboutBD = new Form_RK();
+            FormAboutBD.ShowDialog();
+        }
     }
 }

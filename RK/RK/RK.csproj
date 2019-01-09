@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAboutBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAboutBD.Designer.cs">
+      <DependentUpon>FormAboutBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAboutProg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAboutProg.Designer.cs">
+      <DependentUpon>FormAboutProg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSpravka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSpravka.Designer.cs">
+      <DependentUpon>FormSpravka.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_RK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +72,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAboutBD.resx">
+      <DependentUpon>FormAboutBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAboutProg.resx">
+      <DependentUpon>FormAboutProg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSpravka.resx">
+      <DependentUpon>FormSpravka.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_RK.resx">
       <DependentUpon>Form_RK.cs</DependentUpon>
     </EmbeddedResource>

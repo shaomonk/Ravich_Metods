@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace RK
 {
-    public partial class FormAboutBD : Form
+    public partial class FormSpravka : Form
     {
-        public FormAboutBD()
+        public FormSpravka()
         {
             InitializeComponent();
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private void btnOk_Click(object sender, EventArgs e)
         {
             Close();
         }

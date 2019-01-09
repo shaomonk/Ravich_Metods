@@ -1,6 +1,6 @@
 ﻿namespace RK
 {
-    partial class FormAboutBD
+    partial class FormSpravka
     {
         /// <summary>
         /// Required designer variable.
@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAboutBD));
-            this.btnOK = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSpravka));
+            this.btnOk = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnOK
+            // btnOk
             // 
-            this.btnOK.Location = new System.Drawing.Point(143, 181);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(182, 34);
-            this.btnOK.TabIndex = 0;
-            this.btnOK.Text = "Отмена";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOk.Location = new System.Drawing.Point(141, 318);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(176, 36);
+            this.btnOk.TabIndex = 0;
+            this.btnOk.Text = "Отмена";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 56);
+            this.label1.Location = new System.Drawing.Point(12, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(445, 65);
+            this.label1.Size = new System.Drawing.Size(445, 195);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
             // 
-            // FormAboutBD
+            // FormSpravka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 237);
+            this.ClientSize = new System.Drawing.Size(469, 384);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnOK);
-            this.Name = "FormAboutBD";
-            this.Text = "О базе данных";
+            this.Controls.Add(this.btnOk);
+            this.Name = "FormSpravka";
+            this.Text = "FormSpravka";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,7 +68,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label label1;
     }
 }
