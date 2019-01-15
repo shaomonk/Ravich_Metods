@@ -55,6 +55,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnBD = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnChange = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -91,7 +92,6 @@
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.btnRetry = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
-            this.btnChange = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -123,14 +123,14 @@
             // рассчетToolStripMenuItem
             // 
             this.рассчетToolStripMenuItem.Name = "рассчетToolStripMenuItem";
-            this.рассчетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.рассчетToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.рассчетToolStripMenuItem.Text = "Расчет";
             this.рассчетToolStripMenuItem.Click += new System.EventHandler(this.рассчетToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -346,6 +346,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "База Данных";
             this.groupBox2.Visible = false;
+            // 
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(9, 104);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(85, 31);
+            this.btnChange.TabIndex = 15;
+            this.btnChange.Text = "Изменить БД";
+            this.btnChange.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -681,15 +690,6 @@
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Visible = false;
             // 
-            // btnChange
-            // 
-            this.btnChange.Location = new System.Drawing.Point(9, 104);
-            this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(85, 31);
-            this.btnChange.TabIndex = 15;
-            this.btnChange.Text = "Изменить БД";
-            this.btnChange.UseVisualStyleBackColor = true;
-            // 
             // Form_RK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -709,7 +709,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_RK";
-            this.Text = "РежимКард";
+            this.Text = " сч";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
