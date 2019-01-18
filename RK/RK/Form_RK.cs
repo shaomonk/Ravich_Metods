@@ -13,7 +13,9 @@ namespace RK
     public partial class Form_RK : Form
     {
 
-        FormAboutBD FormAboutBD = new FormAboutBD(); // ne form aboutBD
+        FormAboutBD FormAboutBD = new FormAboutBD(); // new form aboutBD
+        FormSpravka FormSpravka = new FormSpravka(); // new form Spravka
+        FormAboutProg FormAboutProg = new FormAboutProg(); // new form aboutProg
 
         public Form_RK()
         {
@@ -84,8 +86,8 @@ namespace RK
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-         // call form about
-            FormSpravka FormSpravka = new FormSpravka();
+         // call form Spravka
+            
             FormSpravka.ShowDialog();
             
 
@@ -93,8 +95,7 @@ namespace RK
 
         private void программаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_RK FormAboutProg = new Form_RK();
-            FormAboutProg.ShowDialog();
+                 FormAboutProg.ShowDialog();        // call this form
         }
 
         private void поискПоБДToolStripMenuItem_Click(object sender, EventArgs e)
