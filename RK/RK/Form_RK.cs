@@ -79,8 +79,8 @@ namespace RK
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-         
-            Form_RK FormSpravka = new Form_RK();
+         // call form about
+            FormSpravka FormSpravka = new FormSpravka();
             FormSpravka.ShowDialog();
             
 
