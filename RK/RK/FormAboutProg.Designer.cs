@@ -39,7 +39,7 @@
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(182, 33);
             this.btnOk.TabIndex = 0;
-            this.btnOk.Text = "Отмена";
+            this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
