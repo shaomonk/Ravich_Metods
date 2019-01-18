@@ -12,9 +12,14 @@ namespace RK
 {
     public partial class Form_RK : Form
     {
+
+        FormAboutBD FormAboutBD = new FormAboutBD(); // ne form aboutBD
+
         public Form_RK()
         {
             InitializeComponent();
+            
+
         }
 
         void ShowChildForm(Form_RK form)
@@ -94,8 +99,9 @@ namespace RK
 
         private void поискПоБДToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_RK FormAboutBD = new Form_RK();
-            FormAboutBD.ShowDialog();
+           
+            FormAboutBD.ShowDialog(); // cal form AboutBD
+            
         }
     }
 }
