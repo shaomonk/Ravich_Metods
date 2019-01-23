@@ -92,6 +92,8 @@
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.btnRetry = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
+            this.cmbVfuel = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -146,7 +148,7 @@
             // программаToolStripMenuItem
             // 
             this.программаToolStripMenuItem.Name = "программаToolStripMenuItem";
-            this.программаToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.программаToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.программаToolStripMenuItem.Text = "Программа";
             this.программаToolStripMenuItem.Click += new System.EventHandler(this.программаToolStripMenuItem_Click);
             // 
@@ -156,7 +158,7 @@
             this.вывестиБДToolStripMenuItem,
             this.поискПоБДToolStripMenuItem});
             this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
-            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.базаДанныхToolStripMenuItem.Text = "База Данных";
             // 
             // вывестиБДToolStripMenuItem
@@ -181,6 +183,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label27);
+            this.groupBox1.Controls.Add(this.cmbVfuel);
             this.groupBox1.Controls.Add(this.tbBurner);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.btnEnter);
@@ -198,7 +202,7 @@
             // 
             // tbBurner
             // 
-            this.tbBurner.Location = new System.Drawing.Point(91, 90);
+            this.tbBurner.Location = new System.Drawing.Point(91, 130);
             this.tbBurner.Name = "tbBurner";
             this.tbBurner.Size = new System.Drawing.Size(121, 20);
             this.tbBurner.TabIndex = 7;
@@ -206,7 +210,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 93);
+            this.label12.Location = new System.Drawing.Point(6, 133);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 13);
             this.label12.TabIndex = 14;
@@ -225,7 +229,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 58);
+            this.label3.Location = new System.Drawing.Point(6, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 3;
@@ -243,7 +247,7 @@
             // cmbBoiler
             // 
             this.cmbBoiler.FormattingEnabled = true;
-            this.cmbBoiler.Location = new System.Drawing.Point(91, 55);
+            this.cmbBoiler.Location = new System.Drawing.Point(91, 93);
             this.cmbBoiler.Name = "cmbBoiler";
             this.cmbBoiler.Size = new System.Drawing.Size(121, 21);
             this.cmbBoiler.TabIndex = 1;
@@ -690,6 +694,23 @@
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Visible = false;
             // 
+            // cmbVfuel
+            // 
+            this.cmbVfuel.FormattingEnabled = true;
+            this.cmbVfuel.Location = new System.Drawing.Point(91, 52);
+            this.cmbVfuel.Name = "cmbVfuel";
+            this.cmbVfuel.Size = new System.Drawing.Size(121, 21);
+            this.cmbVfuel.TabIndex = 7;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 52);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(70, 13);
+            this.label27.TabIndex = 7;
+            this.label27.Text = "Вид топлива";
+            // 
             // Form_RK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -791,6 +812,8 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox tbBurner;
         private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox cmbVfuel;
     }
 }
 
