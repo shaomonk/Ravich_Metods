@@ -146,7 +146,7 @@
             // программаToolStripMenuItem
             // 
             this.программаToolStripMenuItem.Name = "программаToolStripMenuItem";
-            this.программаToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.программаToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.программаToolStripMenuItem.Text = "Программа";
             this.программаToolStripMenuItem.Click += new System.EventHandler(this.программаToolStripMenuItem_Click);
             // 
@@ -156,7 +156,7 @@
             this.вывестиБДToolStripMenuItem,
             this.поискПоБДToolStripMenuItem});
             this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
-            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.базаДанныхToolStripMenuItem.Text = "База Данных";
             // 
             // вывестиБДToolStripMenuItem
@@ -689,6 +689,7 @@
             this.btnReport.Text = "Вывести отчет";
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Visible = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // Form_RK
             // 

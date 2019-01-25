@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML.Excel; // connect bibl
 
 namespace RK
 {
@@ -103,6 +104,20 @@ namespace RK
            
             FormAboutBD.ShowDialog(); // cal form AboutBD
             
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            
+            var workBook = new ClosedXML.Excel.XLWorkbook(); // new exelFile
+            var worksheet = workBook.Worksheets.Add("hellow_file"); // new worlshhet
+            
+            workBook.SaveAs("c:\\helow.xlsx"); // save file
+            
+
+
+
+
         }
     }
 }
