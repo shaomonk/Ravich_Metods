@@ -48,8 +48,7 @@ namespace RK
         double Q5;          //потери в ОС
 
         double KPDbr1;      //кпд брутто номинальный
-        double KPDbr2;      //кпд брутто фактический
-        double N;           //невязка кпд
+
 
         double By;          //расход топлива удельный
         double KPDkotla;    //кпд котлоагрегата
