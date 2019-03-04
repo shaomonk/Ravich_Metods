@@ -91,6 +91,11 @@
     <Compile Include="linterp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RezhimKardDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RezhimKardDBDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAboutBD.resx">
       <DependentUpon>FormAboutBD.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +127,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RezhimKardDBDataSet.xsc">
+      <DependentUpon>RezhimKardDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RezhimKardDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RezhimKardDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RezhimKardDBDataSet.xss">
+      <DependentUpon>RezhimKardDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
