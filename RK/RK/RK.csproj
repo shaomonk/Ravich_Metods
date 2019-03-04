@@ -47,6 +47,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +61,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FirstCalculation.cs" />
     <Compile Include="FormAboutBD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +86,9 @@
     <Compile Include="Form_RK.Designer.cs">
       <DependentUpon>Form_RK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fuel.cs" />
+    <Compile Include="InputTableData.cs" />
+    <Compile Include="linterp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAboutBD.resx">

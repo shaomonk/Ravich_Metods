@@ -39,8 +39,8 @@
             this.поискПоБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.контактыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbBurner = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnEnter = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,36 +62,34 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.tbGwater = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbPair = new System.Windows.Forms.TextBox();
             this.tbPb = new System.Windows.Forms.TextBox();
-            this.tbPrk = new System.Windows.Forms.TextBox();
-            this.tbQ = new System.Windows.Forms.TextBox();
-            this.tbGwater = new System.Windows.Forms.TextBox();
-            this.tbPwaterD = new System.Windows.Forms.TextBox();
+            this.tbFuel = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.tbQ = new System.Windows.Forms.TextBox();
+            this.tbCO2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.tbNO2 = new System.Windows.Forms.TextBox();
+            this.tbCH4 = new System.Windows.Forms.TextBox();
+            this.tbCO = new System.Windows.Forms.TextBox();
             this.tbYgaz = new System.Windows.Forms.TextBox();
-            this.tbTP = new System.Windows.Forms.TextBox();
-            this.tbTD = new System.Windows.Forms.TextBox();
-            this.tbPwaterP = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.btnRetry = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -181,8 +179,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tbBurner);
             this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.label24);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.btnEnter);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -193,24 +193,25 @@
             this.groupBox1.Size = new System.Drawing.Size(223, 255);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Тип топлива и котлов";
+            this.groupBox1.Text = "Данные";
             this.groupBox1.Visible = false;
             // 
-            // tbBurner
+            // label24
             // 
-            this.tbBurner.Location = new System.Drawing.Point(91, 90);
-            this.tbBurner.Name = "tbBurner";
-            this.tbBurner.Size = new System.Drawing.Size(121, 20);
-            this.tbBurner.TabIndex = 7;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 61);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(70, 13);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "Вид топлива";
             // 
-            // label12
+            // comboBox1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 93);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 13);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Кол-во горелок";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(91, 58);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 7;
             // 
             // btnEnter
             // 
@@ -225,7 +226,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 58);
+            this.label3.Location = new System.Drawing.Point(6, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 3;
@@ -243,7 +244,7 @@
             // cmbBoiler
             // 
             this.cmbBoiler.FormattingEnabled = true;
-            this.cmbBoiler.Location = new System.Drawing.Point(91, 55);
+            this.cmbBoiler.Location = new System.Drawing.Point(91, 96);
             this.cmbBoiler.Name = "cmbBoiler";
             this.cmbBoiler.Size = new System.Drawing.Size(121, 21);
             this.cmbBoiler.TabIndex = 1;
@@ -363,12 +364,15 @@
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.tbGwater);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.tbPair);
             this.groupBox3.Controls.Add(this.tbPb);
-            this.groupBox3.Controls.Add(this.tbPrk);
+            this.groupBox3.Controls.Add(this.tbFuel);
+            this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.tbQ);
             this.groupBox3.Location = new System.Drawing.Point(241, 106);
             this.groupBox3.Name = "groupBox3";
@@ -381,29 +385,29 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(172, 142);
+            this.label20.Location = new System.Drawing.Point(172, 129);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(27, 13);
+            this.label20.Size = new System.Drawing.Size(18, 13);
             this.label20.TabIndex = 6;
-            this.label20.Text = "кПа";
+            this.label20.Text = "*С";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(172, 104);
+            this.label19.Location = new System.Drawing.Point(172, 91);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(27, 13);
+            this.label19.Size = new System.Drawing.Size(18, 13);
             this.label19.TabIndex = 6;
-            this.label19.Text = "кПа";
+            this.label19.Text = "*С";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(172, 65);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(27, 13);
+            this.label18.Size = new System.Drawing.Size(31, 13);
             this.label18.TabIndex = 6;
-            this.label18.Text = "кПа";
+            this.label18.Text = "м3/ч";
             // 
             // label17
             // 
@@ -417,29 +421,45 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 142);
+            this.label9.Location = new System.Drawing.Point(6, 129);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 13);
+            this.label9.Size = new System.Drawing.Size(77, 26);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Давление воздуха";
+            this.label9.Text = "Температура \r\nвоздуха";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(174, 168);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(31, 13);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "м3/ч";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 104);
+            this.label8.Location = new System.Drawing.Point(6, 91);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 26);
+            this.label8.Size = new System.Drawing.Size(98, 26);
             this.label8.TabIndex = 5;
-            this.label8.Text = "Давление газа\r\nперед горелками";
+            this.label8.Text = "Рабочая темпера-\r\nтура топлива";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 61);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 26);
+            this.label7.Size = new System.Drawing.Size(87, 13);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Давление газа \r\nпосле РК";
+            this.label7.Text = "Расход топлива";
+            // 
+            // tbGwater
+            // 
+            this.tbGwater.Location = new System.Drawing.Point(111, 165);
+            this.tbGwater.Name = "tbGwater";
+            this.tbGwater.Size = new System.Drawing.Size(57, 20);
+            this.tbGwater.TabIndex = 2;
             // 
             // label6
             // 
@@ -452,24 +472,33 @@
             // 
             // tbPair
             // 
-            this.tbPair.Location = new System.Drawing.Point(111, 139);
+            this.tbPair.Location = new System.Drawing.Point(111, 126);
             this.tbPair.Name = "tbPair";
             this.tbPair.Size = new System.Drawing.Size(57, 20);
             this.tbPair.TabIndex = 2;
             // 
             // tbPb
             // 
-            this.tbPb.Location = new System.Drawing.Point(111, 101);
+            this.tbPb.Location = new System.Drawing.Point(111, 88);
             this.tbPb.Name = "tbPb";
             this.tbPb.Size = new System.Drawing.Size(57, 20);
             this.tbPb.TabIndex = 2;
             // 
-            // tbPrk
+            // tbFuel
             // 
-            this.tbPrk.Location = new System.Drawing.Point(111, 62);
-            this.tbPrk.Name = "tbPrk";
-            this.tbPrk.Size = new System.Drawing.Size(57, 20);
-            this.tbPrk.TabIndex = 1;
+            this.tbFuel.Location = new System.Drawing.Point(111, 62);
+            this.tbFuel.Name = "tbFuel";
+            this.tbFuel.Size = new System.Drawing.Size(57, 20);
+            this.tbFuel.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 170);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Расход воды";
             // 
             // tbQ
             // 
@@ -477,38 +506,23 @@
             this.tbQ.Name = "tbQ";
             this.tbQ.Size = new System.Drawing.Size(57, 20);
             this.tbQ.TabIndex = 0;
+            this.tbQ.TextChanged += new System.EventHandler(this.tbQ_TextChanged);
             // 
-            // tbGwater
+            // tbCO2
             // 
-            this.tbGwater.Location = new System.Drawing.Point(115, 28);
-            this.tbGwater.Name = "tbGwater";
-            this.tbGwater.Size = new System.Drawing.Size(57, 20);
-            this.tbGwater.TabIndex = 2;
-            // 
-            // tbPwaterD
-            // 
-            this.tbPwaterD.Location = new System.Drawing.Point(115, 58);
-            this.tbPwaterD.Name = "tbPwaterD";
-            this.tbPwaterD.Size = new System.Drawing.Size(57, 20);
-            this.tbPwaterD.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 33);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Расход воды";
+            this.tbCO2.Location = new System.Drawing.Point(116, 25);
+            this.tbCO2.Name = "tbCO2";
+            this.tbCO2.Size = new System.Drawing.Size(80, 20);
+            this.tbCO2.TabIndex = 2;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 57);
+            this.label11.Location = new System.Drawing.Point(14, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 26);
+            this.label11.Size = new System.Drawing.Size(94, 13);
             this.label11.TabIndex = 5;
-            this.label11.Text = "Давление воды \r\nдо котла";
+            this.label11.Text = "Содержание СО2";
             // 
             // monthCalendar1
             // 
@@ -519,23 +533,16 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label26);
-            this.groupBox4.Controls.Add(this.label25);
-            this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Controls.Add(this.label23);
-            this.groupBox4.Controls.Add(this.label22);
-            this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.tbGwater);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.tbNO2);
+            this.groupBox4.Controls.Add(this.tbCH4);
+            this.groupBox4.Controls.Add(this.tbCO);
+            this.groupBox4.Controls.Add(this.tbCO2);
             this.groupBox4.Controls.Add(this.tbYgaz);
-            this.groupBox4.Controls.Add(this.tbTP);
-            this.groupBox4.Controls.Add(this.tbTD);
-            this.groupBox4.Controls.Add(this.tbPwaterP);
-            this.groupBox4.Controls.Add(this.tbPwaterD);
+            this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Location = new System.Drawing.Point(466, 106);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(219, 255);
@@ -547,120 +554,75 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(178, 193);
+            this.label26.Location = new System.Drawing.Point(178, 225);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(18, 13);
             this.label26.TabIndex = 6;
             this.label26.Text = "*С";
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(178, 165);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(18, 13);
-            this.label25.TabIndex = 6;
-            this.label25.Text = "*С";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(178, 141);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(18, 13);
-            this.label24.TabIndex = 6;
-            this.label24.Text = "*С";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(178, 101);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(30, 13);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "МПа";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(178, 61);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(30, 13);
-            this.label22.TabIndex = 6;
-            this.label22.Text = "МПа";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(178, 31);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(31, 13);
-            this.label21.TabIndex = 6;
-            this.label21.Text = "м3/ч";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(17, 164);
+            this.label16.Location = new System.Drawing.Point(15, 121);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(79, 13);
+            this.label16.Size = new System.Drawing.Size(95, 13);
             this.label16.TabIndex = 5;
-            this.label16.Text = "Т после котла";
+            this.label16.Text = "Содержание NO2";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(17, 137);
+            this.label15.Location = new System.Drawing.Point(15, 88);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 13);
+            this.label15.Size = new System.Drawing.Size(94, 13);
             this.label15.TabIndex = 5;
-            this.label15.Text = "Т до котла";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 192);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 13);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Т ух газов";
+            this.label15.Text = "Содержание СН4";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(20, 97);
+            this.label13.Location = new System.Drawing.Point(16, 55);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 26);
+            this.label13.Size = new System.Drawing.Size(88, 13);
             this.label13.TabIndex = 5;
-            this.label13.Text = "Давление воды\r\nпосле котла";
+            this.label13.Text = "Содержание СО";
+            // 
+            // tbNO2
+            // 
+            this.tbNO2.Location = new System.Drawing.Point(116, 121);
+            this.tbNO2.Name = "tbNO2";
+            this.tbNO2.Size = new System.Drawing.Size(80, 20);
+            this.tbNO2.TabIndex = 2;
+            // 
+            // tbCH4
+            // 
+            this.tbCH4.Location = new System.Drawing.Point(116, 87);
+            this.tbCH4.Name = "tbCH4";
+            this.tbCH4.Size = new System.Drawing.Size(80, 20);
+            this.tbCH4.TabIndex = 2;
+            // 
+            // tbCO
+            // 
+            this.tbCO.Location = new System.Drawing.Point(116, 55);
+            this.tbCO.Name = "tbCO";
+            this.tbCO.Size = new System.Drawing.Size(80, 20);
+            this.tbCO.TabIndex = 2;
             // 
             // tbYgaz
             // 
-            this.tbYgaz.Location = new System.Drawing.Point(115, 190);
+            this.tbYgaz.Location = new System.Drawing.Point(115, 222);
             this.tbYgaz.Name = "tbYgaz";
             this.tbYgaz.Size = new System.Drawing.Size(57, 20);
             this.tbYgaz.TabIndex = 2;
             // 
-            // tbTP
+            // label14
             // 
-            this.tbTP.Location = new System.Drawing.Point(115, 164);
-            this.tbTP.Name = "tbTP";
-            this.tbTP.Size = new System.Drawing.Size(57, 20);
-            this.tbTP.TabIndex = 2;
-            // 
-            // tbTD
-            // 
-            this.tbTD.Location = new System.Drawing.Point(115, 138);
-            this.tbTD.Name = "tbTD";
-            this.tbTD.Size = new System.Drawing.Size(57, 20);
-            this.tbTD.TabIndex = 2;
-            // 
-            // tbPwaterP
-            // 
-            this.tbPwaterP.Location = new System.Drawing.Point(115, 98);
-            this.tbPwaterP.Name = "tbPwaterP";
-            this.tbPwaterP.Size = new System.Drawing.Size(57, 20);
-            this.tbPwaterP.TabIndex = 2;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 224);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 13);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Т ух газов";
             // 
             // vScrollBar1
             // 
@@ -691,6 +653,23 @@
             this.btnReport.Visible = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 136);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 13);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Марка котла";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(91, 133);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 17;
+            // 
             // Form_RK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -711,6 +690,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_RK";
             this.Text = " сч";
+            this.Load += new System.EventHandler(this.Form_RK_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -754,11 +734,11 @@
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbPwaterD;
+        private System.Windows.Forms.TextBox tbCO2;
         private System.Windows.Forms.TextBox tbGwater;
         private System.Windows.Forms.TextBox tbPair;
         private System.Windows.Forms.TextBox tbPb;
-        private System.Windows.Forms.TextBox tbPrk;
+        private System.Windows.Forms.TextBox tbFuel;
         private System.Windows.Forms.TextBox tbQ;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -767,16 +747,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmbBoilerBD;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbYgaz;
-        private System.Windows.Forms.TextBox tbTP;
-        private System.Windows.Forms.TextBox tbTD;
-        private System.Windows.Forms.TextBox tbPwaterP;
+        private System.Windows.Forms.TextBox tbNO2;
+        private System.Windows.Forms.TextBox tbCH4;
+        private System.Windows.Forms.TextBox tbCO;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Button btnRetry;
         private System.Windows.Forms.Button btnReport;
@@ -785,13 +764,12 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox tbBurner;
         private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 

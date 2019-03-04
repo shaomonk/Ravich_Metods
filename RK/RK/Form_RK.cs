@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClosedXML.Excel; // connect bibl
 
+
 namespace RK
 {
     public partial class Form_RK : Form
     {
-
+        Fuel fuel1 = new Fuel();
         FormAboutBD FormAboutBD = new FormAboutBD(); // new form aboutBD
         FormSpravka FormSpravka = new FormSpravka(); // new form Spravka
         FormAboutProg FormAboutProg = new FormAboutProg(); // new form aboutProg
@@ -61,6 +62,21 @@ namespace RK
 
         private void button2_Click(object sender, EventArgs e)
         {
+            /* Gaz Gaz1 = new Gaz();
+             Gaz1.PowerBoiler = Convert.ToDouble(tbQ.Text);
+             Gaz1.FlowFuel = Convert.ToDouble(tbPrk.Text);
+             Gaz1.FlowWater = Convert.ToDouble(tbGwater.Text);
+             Gaz1.TempFuel = Convert.ToDouble(tbPb.Text);
+             Gaz1.TempAir = Convert.ToInt16(tbPair.Text);
+
+             Gaz1.CostCH4 = Convert.ToDouble(tbCH4.Text);
+             Gaz1.CostCO = Convert.ToDouble(tbCO.Text);
+             Gaz1.CostCO2 = Convert.ToDouble(tbCO2.Text);
+             Gaz1.CostNO2 = Convert.ToDouble(tbNO2.Text);
+             Gaz1.TempSmokeGaz = Convert.ToDouble(tbYgaz.Text);
+
+             label12.Text = Convert.ToString(Gaz1.RO2max);*/
+            //fuel1(222, "dsaygdsya");
             btnRetry.Visible = true;
             btnReport.Visible = true;
             groupBox1.Visible = false;
@@ -74,14 +90,13 @@ namespace RK
             groupBox1.Visible = true;
             groupBox3.Visible = true;
             groupBox4.Visible = true;
+
+            tbFuel.Clear();
+            tbCO2.Clear();
+            tbCO.Clear();
+            tbCH4.Clear();
+            tbNO2.Clear();
             
-            tbQ.Clear();
-            tbPrk.Clear();
-            tbPb.Clear();
-            tbPair.Clear();
-     
-            tbTD.Clear();
-            tbTP.Clear();
             tbYgaz.Clear();
         }
 
@@ -117,6 +132,16 @@ namespace RK
 
 
 
+
+        }
+
+        private void tbQ_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_RK_Load(object sender, EventArgs e)
+        {
 
         }
     }
