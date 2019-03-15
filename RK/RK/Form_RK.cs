@@ -62,7 +62,7 @@ namespace RK
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnRas_Click(object sender, EventArgs e)
         {
             
             btnRetry.Visible = true;
@@ -74,11 +74,12 @@ namespace RK
             
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnRetry_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
             groupBox3.Visible = true;
             groupBox4.Visible = true;
+            dataResult.Visible = false;
 
             tbFuel.Clear();
             tbCO2.Clear();
