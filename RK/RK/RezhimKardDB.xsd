@@ -216,8 +216,8 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="tipBoiler" DataSetColumn="tipBoiler" />
-              <Mapping SourceColumn="Naimenovanie" DataSetColumn="Naimenovanie" />
+              <Mapping SourceColumn="tipBoiler" DataSetColumn="Boiler" />
+              <Mapping SourceColumn="Naimenovanie" DataSetColumn="tipBoiler" />
               <Mapping SourceColumn="F,m2" DataSetColumn="F,m2" />
               <Mapping SourceColumn="tf,0C" DataSetColumn="tf,0C" />
               <Mapping SourceColumn="L,mm" DataSetColumn="L,mm" />
@@ -313,8 +313,8 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="tipBoiler" DataSetColumn="tipBoiler" />
-              <Mapping SourceColumn="Naimenovanie" DataSetColumn="Naimenovanie" />
+              <Mapping SourceColumn="tipBoiler" DataSetColumn="Boiler" />
+              <Mapping SourceColumn="Naimenovanie" DataSetColumn="tipBoiler" />
               <Mapping SourceColumn="F,m2" DataSetColumn="F,m2" />
               <Mapping SourceColumn="tf,0C" DataSetColumn="tf,0C" />
               <Mapping SourceColumn="L,mm" DataSetColumn="L,mm" />
@@ -408,8 +408,8 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="tipBoiler" DataSetColumn="tipBoiler" />
-              <Mapping SourceColumn="Naimenovanie" DataSetColumn="Naimenovanie" />
+              <Mapping SourceColumn="tipBoiler" DataSetColumn="Boiler" />
+              <Mapping SourceColumn="Naimenovanie" DataSetColumn="tipBoiler" />
               <Mapping SourceColumn="F,m2" DataSetColumn="F,m2" />
               <Mapping SourceColumn="tf,0C" DataSetColumn="tf,0C" />
               <Mapping SourceColumn="L,mm" DataSetColumn="L,mm" />
@@ -505,8 +505,8 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="tipFuel" DataSetColumn="tipFuel" />
-              <Mapping SourceColumn="NameFuel" DataSetColumn="NameFuel" />
+              <Mapping SourceColumn="tipFuel" DataSetColumn="Fuel" />
+              <Mapping SourceColumn="NameFuel" DataSetColumn="tipFuel" />
               <Mapping SourceColumn="Qpn" DataSetColumn="Qpn" />
               <Mapping SourceColumn="tmax,0C" DataSetColumn="tmax,0C" />
               <Mapping SourceColumn="C2" DataSetColumn="C2" />
@@ -632,8 +632,8 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="tipFuel" DataSetColumn="tipFuel" />
-              <Mapping SourceColumn="NameFuel" DataSetColumn="NameFuel" />
+              <Mapping SourceColumn="tipFuel" DataSetColumn="Fuel" />
+              <Mapping SourceColumn="NameFuel" DataSetColumn="tipFuel" />
               <Mapping SourceColumn="Qpn" DataSetColumn="Qpn" />
               <Mapping SourceColumn="tmax,0C" DataSetColumn="tmax,0C" />
               <Mapping SourceColumn="H2,%" DataSetColumn="H2,%" />
@@ -758,8 +758,8 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="tipFuel" DataSetColumn="tipFuel" />
-              <Mapping SourceColumn="NameFuel" DataSetColumn="NameFuel" />
+              <Mapping SourceColumn="tipFuel" DataSetColumn="Fuel" />
+              <Mapping SourceColumn="NameFuel" DataSetColumn="tipFuel" />
               <Mapping SourceColumn="Qpn" DataSetColumn="Qpn" />
               <Mapping SourceColumn="tmax,0C" DataSetColumn="tmax,0C" />
               <Mapping SourceColumn="H2,%" DataSetColumn="H2,%" />
@@ -974,7 +974,7 @@
   <xs:element name="RezhimKardDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RezhimKardDB" msprop:Generator_UserDSName="RezhimKardDB">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="boiler" msprop:Generator_TableClassName="boilerDataTable" msprop:Generator_TableVarName="tableboiler" msprop:Generator_TablePropName="boiler" msprop:Generator_RowDeletingName="boilerRowDeleting" msprop:Generator_RowChangingName="boilerRowChanging" msprop:Generator_RowEvHandlerName="boilerRowChangeEventHandler" msprop:Generator_RowDeletedName="boilerRowDeleted" msprop:Generator_UserTableName="boiler" msprop:Generator_RowChangedName="boilerRowChanged" msprop:Generator_RowEvArgName="boilerRowChangeEvent" msprop:Generator_RowClassName="boilerRow">
+        <xs:element name="boiler" msprop:Generator_TableClassName="boilerDataTable" msprop:Generator_TableVarName="tableboiler" msprop:Generator_RowChangedName="boilerRowChanged" msprop:Generator_TablePropName="boiler" msprop:Generator_RowDeletingName="boilerRowDeleting" msprop:Generator_RowChangingName="boilerRowChanging" msprop:Generator_RowEvHandlerName="boilerRowChangeEventHandler" msprop:Generator_RowDeletedName="boilerRowDeleted" msprop:Generator_RowClassName="boilerRow" msprop:Generator_UserTableName="boiler" msprop:Generator_RowEvArgName="boilerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="keyBoiler" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnkeyBoiler" msprop:Generator_ColumnPropNameInRow="keyBoiler" msprop:Generator_ColumnPropNameInTable="keyBoilerColumn" msprop:Generator_UserColumnName="keyBoiler" type="xs:int" />
@@ -988,7 +988,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="temperature" msprop:Generator_TableClassName="temperatureDataTable" msprop:Generator_TableVarName="tabletemperature" msprop:Generator_TablePropName="temperature" msprop:Generator_RowDeletingName="temperatureRowDeleting" msprop:Generator_RowChangingName="temperatureRowChanging" msprop:Generator_RowEvHandlerName="temperatureRowChangeEventHandler" msprop:Generator_RowDeletedName="temperatureRowDeleted" msprop:Generator_UserTableName="temperature" msprop:Generator_RowChangedName="temperatureRowChanged" msprop:Generator_RowEvArgName="temperatureRowChangeEvent" msprop:Generator_RowClassName="temperatureRow">
+        <xs:element name="temperature" msprop:Generator_TableClassName="temperatureDataTable" msprop:Generator_TableVarName="tabletemperature" msprop:Generator_RowChangedName="temperatureRowChanged" msprop:Generator_TablePropName="temperature" msprop:Generator_RowDeletingName="temperatureRowDeleting" msprop:Generator_RowChangingName="temperatureRowChanging" msprop:Generator_RowEvHandlerName="temperatureRowChangeEventHandler" msprop:Generator_RowDeletedName="temperatureRowDeleted" msprop:Generator_RowClassName="temperatureRow" msprop:Generator_UserTableName="temperature" msprop:Generator_RowEvArgName="temperatureRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="keyTemperature" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnkeyTemperature" msprop:Generator_ColumnPropNameInRow="keyTemperature" msprop:Generator_ColumnPropNameInTable="keyTemperatureColumn" msprop:Generator_UserColumnName="keyTemperature" type="xs:int" />
@@ -999,12 +999,12 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="boiler_gabarit_steam" msprop:Generator_TableClassName="boiler_gabarit_steamDataTable" msprop:Generator_TableVarName="tableboiler_gabarit_steam" msprop:Generator_TablePropName="boiler_gabarit_steam" msprop:Generator_RowDeletingName="boiler_gabarit_steamRowDeleting" msprop:Generator_RowChangingName="boiler_gabarit_steamRowChanging" msprop:Generator_RowEvHandlerName="boiler_gabarit_steamRowChangeEventHandler" msprop:Generator_RowDeletedName="boiler_gabarit_steamRowDeleted" msprop:Generator_UserTableName="boiler_gabarit_steam" msprop:Generator_RowChangedName="boiler_gabarit_steamRowChanged" msprop:Generator_RowEvArgName="boiler_gabarit_steamRowChangeEvent" msprop:Generator_RowClassName="boiler_gabarit_steamRow">
+        <xs:element name="boiler_gabarit_steam" msprop:Generator_TableClassName="boiler_gabarit_steamDataTable" msprop:Generator_TableVarName="tableboiler_gabarit_steam" msprop:Generator_RowChangedName="boiler_gabarit_steamRowChanged" msprop:Generator_TablePropName="boiler_gabarit_steam" msprop:Generator_RowDeletingName="boiler_gabarit_steamRowDeleting" msprop:Generator_RowChangingName="boiler_gabarit_steamRowChanging" msprop:Generator_RowEvHandlerName="boiler_gabarit_steamRowChangeEventHandler" msprop:Generator_RowDeletedName="boiler_gabarit_steamRowDeleted" msprop:Generator_RowClassName="boiler_gabarit_steamRow" msprop:Generator_UserTableName="boiler_gabarit_steam" msprop:Generator_RowEvArgName="boiler_gabarit_steamRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="tipBoiler" msprop:Generator_ColumnVarNameInTable="columntipBoiler" msprop:Generator_ColumnPropNameInRow="tipBoiler" msprop:Generator_ColumnPropNameInTable="tipBoilerColumn" msprop:Generator_UserColumnName="tipBoiler" type="xs:int" minOccurs="0" />
-              <xs:element name="Naimenovanie" msprop:Generator_ColumnVarNameInTable="columnNaimenovanie" msprop:Generator_ColumnPropNameInRow="Naimenovanie" msprop:Generator_ColumnPropNameInTable="NaimenovanieColumn" msprop:Generator_UserColumnName="Naimenovanie" minOccurs="0">
+              <xs:element name="Boiler" msprop:Generator_ColumnVarNameInTable="columnBoiler" msprop:Generator_ColumnPropNameInRow="Boiler" msprop:Generator_ColumnPropNameInTable="BoilerColumn" msprop:Generator_UserColumnName="Boiler" type="xs:int" minOccurs="0" />
+              <xs:element name="tipBoiler" msprop:Generator_ColumnVarNameInTable="columntipBoiler" msprop:Generator_ColumnPropNameInRow="tipBoiler" msprop:Generator_ColumnPropNameInTable="tipBoilerColumn" msprop:Generator_UserColumnName="tipBoiler" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -1022,12 +1022,12 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="boiler_gabarit_water_gaz_x002F_zhidkoe" msprop:Generator_TableClassName="_boiler_gabarit_water_gaz_zhidkoeDataTable" msprop:Generator_TableVarName="_tableboiler_gabarit_water_gaz_zhidkoe" msprop:Generator_TablePropName="_boiler_gabarit_water_gaz_zhidkoe" msprop:Generator_RowDeletingName="_boiler_gabarit_water_gaz_zhidkoeRowDeleting" msprop:Generator_RowChangingName="_boiler_gabarit_water_gaz_zhidkoeRowChanging" msprop:Generator_RowEvHandlerName="_boiler_gabarit_water_gaz_zhidkoeRowChangeEventHandler" msprop:Generator_RowDeletedName="_boiler_gabarit_water_gaz_zhidkoeRowDeleted" msprop:Generator_UserTableName="boiler_gabarit_water_gaz/zhidkoe" msprop:Generator_RowChangedName="_boiler_gabarit_water_gaz_zhidkoeRowChanged" msprop:Generator_RowEvArgName="_boiler_gabarit_water_gaz_zhidkoeRowChangeEvent" msprop:Generator_RowClassName="_boiler_gabarit_water_gaz_zhidkoeRow">
+        <xs:element name="boiler_gabarit_water_gaz_x002F_zhidkoe" msprop:Generator_TableClassName="_boiler_gabarit_water_gaz_zhidkoeDataTable" msprop:Generator_TableVarName="_tableboiler_gabarit_water_gaz_zhidkoe" msprop:Generator_RowChangedName="_boiler_gabarit_water_gaz_zhidkoeRowChanged" msprop:Generator_TablePropName="_boiler_gabarit_water_gaz_zhidkoe" msprop:Generator_RowDeletingName="_boiler_gabarit_water_gaz_zhidkoeRowDeleting" msprop:Generator_RowChangingName="_boiler_gabarit_water_gaz_zhidkoeRowChanging" msprop:Generator_RowEvHandlerName="_boiler_gabarit_water_gaz_zhidkoeRowChangeEventHandler" msprop:Generator_RowDeletedName="_boiler_gabarit_water_gaz_zhidkoeRowDeleted" msprop:Generator_RowClassName="_boiler_gabarit_water_gaz_zhidkoeRow" msprop:Generator_UserTableName="boiler_gabarit_water_gaz/zhidkoe" msprop:Generator_RowEvArgName="_boiler_gabarit_water_gaz_zhidkoeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="tipBoiler" msprop:Generator_ColumnVarNameInTable="columntipBoiler" msprop:Generator_ColumnPropNameInRow="tipBoiler" msprop:Generator_ColumnPropNameInTable="tipBoilerColumn" msprop:Generator_UserColumnName="tipBoiler" type="xs:int" minOccurs="0" />
-              <xs:element name="Naimenovanie" msprop:Generator_ColumnVarNameInTable="columnNaimenovanie" msprop:Generator_ColumnPropNameInRow="Naimenovanie" msprop:Generator_ColumnPropNameInTable="NaimenovanieColumn" msprop:Generator_UserColumnName="Naimenovanie" minOccurs="0">
+              <xs:element name="Boiler" msprop:Generator_ColumnVarNameInTable="columnBoiler" msprop:Generator_ColumnPropNameInRow="Boiler" msprop:Generator_ColumnPropNameInTable="BoilerColumn" msprop:Generator_UserColumnName="Boiler" type="xs:int" minOccurs="0" />
+              <xs:element name="tipBoiler" msprop:Generator_ColumnVarNameInTable="columntipBoiler" msprop:Generator_ColumnPropNameInRow="tipBoiler" msprop:Generator_ColumnPropNameInTable="tipBoilerColumn" msprop:Generator_UserColumnName="tipBoiler" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -1043,12 +1043,12 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="boiler_gabarit_water_tv" msprop:Generator_TableClassName="boiler_gabarit_water_tvDataTable" msprop:Generator_TableVarName="tableboiler_gabarit_water_tv" msprop:Generator_TablePropName="boiler_gabarit_water_tv" msprop:Generator_RowDeletingName="boiler_gabarit_water_tvRowDeleting" msprop:Generator_RowChangingName="boiler_gabarit_water_tvRowChanging" msprop:Generator_RowEvHandlerName="boiler_gabarit_water_tvRowChangeEventHandler" msprop:Generator_RowDeletedName="boiler_gabarit_water_tvRowDeleted" msprop:Generator_UserTableName="boiler_gabarit_water_tv" msprop:Generator_RowChangedName="boiler_gabarit_water_tvRowChanged" msprop:Generator_RowEvArgName="boiler_gabarit_water_tvRowChangeEvent" msprop:Generator_RowClassName="boiler_gabarit_water_tvRow">
+        <xs:element name="boiler_gabarit_water_tv" msprop:Generator_TableClassName="boiler_gabarit_water_tvDataTable" msprop:Generator_TableVarName="tableboiler_gabarit_water_tv" msprop:Generator_RowChangedName="boiler_gabarit_water_tvRowChanged" msprop:Generator_TablePropName="boiler_gabarit_water_tv" msprop:Generator_RowDeletingName="boiler_gabarit_water_tvRowDeleting" msprop:Generator_RowChangingName="boiler_gabarit_water_tvRowChanging" msprop:Generator_RowEvHandlerName="boiler_gabarit_water_tvRowChangeEventHandler" msprop:Generator_RowDeletedName="boiler_gabarit_water_tvRowDeleted" msprop:Generator_RowClassName="boiler_gabarit_water_tvRow" msprop:Generator_UserTableName="boiler_gabarit_water_tv" msprop:Generator_RowEvArgName="boiler_gabarit_water_tvRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="tipBoiler" msprop:Generator_ColumnVarNameInTable="columntipBoiler" msprop:Generator_ColumnPropNameInRow="tipBoiler" msprop:Generator_ColumnPropNameInTable="tipBoilerColumn" msprop:Generator_UserColumnName="tipBoiler" type="xs:int" minOccurs="0" />
-              <xs:element name="Naimenovanie" msprop:Generator_ColumnVarNameInTable="columnNaimenovanie" msprop:Generator_ColumnPropNameInRow="Naimenovanie" msprop:Generator_ColumnPropNameInTable="NaimenovanieColumn" msprop:Generator_UserColumnName="Naimenovanie" minOccurs="0">
+              <xs:element name="Boiler" msprop:Generator_ColumnVarNameInTable="columnBoiler" msprop:Generator_ColumnPropNameInRow="Boiler" msprop:Generator_ColumnPropNameInTable="BoilerColumn" msprop:Generator_UserColumnName="Boiler" type="xs:int" minOccurs="0" />
+              <xs:element name="tipBoiler" msprop:Generator_ColumnVarNameInTable="columntipBoiler" msprop:Generator_ColumnPropNameInRow="tipBoiler" msprop:Generator_ColumnPropNameInTable="tipBoilerColumn" msprop:Generator_UserColumnName="tipBoiler" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -1064,12 +1064,12 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="char_gaz" msprop:Generator_TableClassName="char_gazDataTable" msprop:Generator_TableVarName="tablechar_gaz" msprop:Generator_TablePropName="char_gaz" msprop:Generator_RowDeletingName="char_gazRowDeleting" msprop:Generator_RowChangingName="char_gazRowChanging" msprop:Generator_RowEvHandlerName="char_gazRowChangeEventHandler" msprop:Generator_RowDeletedName="char_gazRowDeleted" msprop:Generator_UserTableName="char_gaz" msprop:Generator_RowChangedName="char_gazRowChanged" msprop:Generator_RowEvArgName="char_gazRowChangeEvent" msprop:Generator_RowClassName="char_gazRow">
+        <xs:element name="char_gaz" msprop:Generator_TableClassName="char_gazDataTable" msprop:Generator_TableVarName="tablechar_gaz" msprop:Generator_RowChangedName="char_gazRowChanged" msprop:Generator_TablePropName="char_gaz" msprop:Generator_RowDeletingName="char_gazRowDeleting" msprop:Generator_RowChangingName="char_gazRowChanging" msprop:Generator_RowEvHandlerName="char_gazRowChangeEventHandler" msprop:Generator_RowDeletedName="char_gazRowDeleted" msprop:Generator_RowClassName="char_gazRow" msprop:Generator_UserTableName="char_gaz" msprop:Generator_RowEvArgName="char_gazRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="tipFuel" msprop:Generator_ColumnVarNameInTable="columntipFuel" msprop:Generator_ColumnPropNameInRow="tipFuel" msprop:Generator_ColumnPropNameInTable="tipFuelColumn" msprop:Generator_UserColumnName="tipFuel" type="xs:int" minOccurs="0" />
-              <xs:element name="NameFuel" msprop:Generator_ColumnVarNameInTable="columnNameFuel" msprop:Generator_ColumnPropNameInRow="NameFuel" msprop:Generator_ColumnPropNameInTable="NameFuelColumn" msprop:Generator_UserColumnName="NameFuel" minOccurs="0">
+              <xs:element name="Fuel" msprop:Generator_ColumnVarNameInTable="columnFuel" msprop:Generator_ColumnPropNameInRow="Fuel" msprop:Generator_ColumnPropNameInTable="FuelColumn" msprop:Generator_UserColumnName="Fuel" type="xs:int" minOccurs="0" />
+              <xs:element name="tipFuel" msprop:Generator_ColumnVarNameInTable="columntipFuel" msprop:Generator_ColumnPropNameInRow="tipFuel" msprop:Generator_ColumnPropNameInTable="tipFuelColumn" msprop:Generator_UserColumnName="tipFuel" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
@@ -1085,12 +1085,12 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="char_tv" msprop:Generator_TableClassName="char_tvDataTable" msprop:Generator_TableVarName="tablechar_tv" msprop:Generator_TablePropName="char_tv" msprop:Generator_RowDeletingName="char_tvRowDeleting" msprop:Generator_RowChangingName="char_tvRowChanging" msprop:Generator_RowEvHandlerName="char_tvRowChangeEventHandler" msprop:Generator_RowDeletedName="char_tvRowDeleted" msprop:Generator_UserTableName="char_tv" msprop:Generator_RowChangedName="char_tvRowChanged" msprop:Generator_RowEvArgName="char_tvRowChangeEvent" msprop:Generator_RowClassName="char_tvRow">
+        <xs:element name="char_tv" msprop:Generator_TableClassName="char_tvDataTable" msprop:Generator_TableVarName="tablechar_tv" msprop:Generator_RowChangedName="char_tvRowChanged" msprop:Generator_TablePropName="char_tv" msprop:Generator_RowDeletingName="char_tvRowDeleting" msprop:Generator_RowChangingName="char_tvRowChanging" msprop:Generator_RowEvHandlerName="char_tvRowChangeEventHandler" msprop:Generator_RowDeletedName="char_tvRowDeleted" msprop:Generator_RowClassName="char_tvRow" msprop:Generator_UserTableName="char_tv" msprop:Generator_RowEvArgName="char_tvRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="tipFuel" msprop:Generator_ColumnVarNameInTable="columntipFuel" msprop:Generator_ColumnPropNameInRow="tipFuel" msprop:Generator_ColumnPropNameInTable="tipFuelColumn" msprop:Generator_UserColumnName="tipFuel" type="xs:int" minOccurs="0" />
-              <xs:element name="NameFuel" msprop:Generator_ColumnVarNameInTable="columnNameFuel" msprop:Generator_ColumnPropNameInRow="NameFuel" msprop:Generator_ColumnPropNameInTable="NameFuelColumn" msprop:Generator_UserColumnName="NameFuel" minOccurs="0">
+              <xs:element name="Fuel" msprop:Generator_ColumnVarNameInTable="columnFuel" msprop:Generator_ColumnPropNameInRow="Fuel" msprop:Generator_ColumnPropNameInTable="FuelColumn" msprop:Generator_UserColumnName="Fuel" type="xs:int" minOccurs="0" />
+              <xs:element name="tipFuel" msprop:Generator_ColumnVarNameInTable="columntipFuel" msprop:Generator_ColumnPropNameInRow="tipFuel" msprop:Generator_ColumnPropNameInTable="tipFuelColumn" msprop:Generator_UserColumnName="tipFuel" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
@@ -1111,12 +1111,12 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="char_zhidkoe" msprop:Generator_TableClassName="char_zhidkoeDataTable" msprop:Generator_TableVarName="tablechar_zhidkoe" msprop:Generator_TablePropName="char_zhidkoe" msprop:Generator_RowDeletingName="char_zhidkoeRowDeleting" msprop:Generator_RowChangingName="char_zhidkoeRowChanging" msprop:Generator_RowEvHandlerName="char_zhidkoeRowChangeEventHandler" msprop:Generator_RowDeletedName="char_zhidkoeRowDeleted" msprop:Generator_UserTableName="char_zhidkoe" msprop:Generator_RowChangedName="char_zhidkoeRowChanged" msprop:Generator_RowEvArgName="char_zhidkoeRowChangeEvent" msprop:Generator_RowClassName="char_zhidkoeRow">
+        <xs:element name="char_zhidkoe" msprop:Generator_TableClassName="char_zhidkoeDataTable" msprop:Generator_TableVarName="tablechar_zhidkoe" msprop:Generator_RowChangedName="char_zhidkoeRowChanged" msprop:Generator_TablePropName="char_zhidkoe" msprop:Generator_RowDeletingName="char_zhidkoeRowDeleting" msprop:Generator_RowChangingName="char_zhidkoeRowChanging" msprop:Generator_RowEvHandlerName="char_zhidkoeRowChangeEventHandler" msprop:Generator_RowDeletedName="char_zhidkoeRowDeleted" msprop:Generator_RowClassName="char_zhidkoeRow" msprop:Generator_UserTableName="char_zhidkoe" msprop:Generator_RowEvArgName="char_zhidkoeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="tipFuel" msprop:Generator_ColumnVarNameInTable="columntipFuel" msprop:Generator_ColumnPropNameInRow="tipFuel" msprop:Generator_ColumnPropNameInTable="tipFuelColumn" msprop:Generator_UserColumnName="tipFuel" type="xs:int" minOccurs="0" />
-              <xs:element name="NameFuel" msprop:Generator_ColumnVarNameInTable="columnNameFuel" msprop:Generator_ColumnPropNameInRow="NameFuel" msprop:Generator_ColumnPropNameInTable="NameFuelColumn" msprop:Generator_UserColumnName="NameFuel" minOccurs="0">
+              <xs:element name="Fuel" msprop:Generator_ColumnVarNameInTable="columnFuel" msprop:Generator_ColumnPropNameInRow="Fuel" msprop:Generator_ColumnPropNameInTable="FuelColumn" msprop:Generator_UserColumnName="Fuel" type="xs:int" minOccurs="0" />
+              <xs:element name="tipFuel" msprop:Generator_ColumnVarNameInTable="columntipFuel" msprop:Generator_ColumnPropNameInRow="tipFuel" msprop:Generator_ColumnPropNameInTable="tipFuelColumn" msprop:Generator_UserColumnName="tipFuel" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
@@ -1136,7 +1136,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="fuel" msprop:Generator_TableClassName="fuelDataTable" msprop:Generator_TableVarName="tablefuel" msprop:Generator_TablePropName="fuel" msprop:Generator_RowDeletingName="fuelRowDeleting" msprop:Generator_RowChangingName="fuelRowChanging" msprop:Generator_RowEvHandlerName="fuelRowChangeEventHandler" msprop:Generator_RowDeletedName="fuelRowDeleted" msprop:Generator_UserTableName="fuel" msprop:Generator_RowChangedName="fuelRowChanged" msprop:Generator_RowEvArgName="fuelRowChangeEvent" msprop:Generator_RowClassName="fuelRow">
+        <xs:element name="fuel" msprop:Generator_TableClassName="fuelDataTable" msprop:Generator_TableVarName="tablefuel" msprop:Generator_RowChangedName="fuelRowChanged" msprop:Generator_TablePropName="fuel" msprop:Generator_RowDeletingName="fuelRowDeleting" msprop:Generator_RowChangingName="fuelRowChanging" msprop:Generator_RowEvHandlerName="fuelRowChangeEventHandler" msprop:Generator_RowDeletedName="fuelRowDeleted" msprop:Generator_RowClassName="fuelRow" msprop:Generator_UserTableName="fuel" msprop:Generator_RowEvArgName="fuelRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="keyFuel" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnkeyFuel" msprop:Generator_ColumnPropNameInRow="keyFuel" msprop:Generator_ColumnPropNameInTable="keyFuelColumn" msprop:Generator_UserColumnName="keyFuel" type="xs:int" />
@@ -1150,7 +1150,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="koef_C_K" msprop:Generator_TableClassName="koef_C_KDataTable" msprop:Generator_TableVarName="tablekoef_C_K" msprop:Generator_TablePropName="koef_C_K" msprop:Generator_RowDeletingName="koef_C_KRowDeleting" msprop:Generator_RowChangingName="koef_C_KRowChanging" msprop:Generator_RowEvHandlerName="koef_C_KRowChangeEventHandler" msprop:Generator_RowDeletedName="koef_C_KRowDeleted" msprop:Generator_UserTableName="koef_C_K" msprop:Generator_RowChangedName="koef_C_KRowChanged" msprop:Generator_RowEvArgName="koef_C_KRowChangeEvent" msprop:Generator_RowClassName="koef_C_KRow">
+        <xs:element name="koef_C_K" msprop:Generator_TableClassName="koef_C_KDataTable" msprop:Generator_TableVarName="tablekoef_C_K" msprop:Generator_RowChangedName="koef_C_KRowChanged" msprop:Generator_TablePropName="koef_C_K" msprop:Generator_RowDeletingName="koef_C_KRowDeleting" msprop:Generator_RowChangingName="koef_C_KRowChanging" msprop:Generator_RowEvHandlerName="koef_C_KRowChangeEventHandler" msprop:Generator_RowDeletedName="koef_C_KRowDeleted" msprop:Generator_RowClassName="koef_C_KRow" msprop:Generator_UserTableName="koef_C_K" msprop:Generator_RowEvArgName="koef_C_KRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="t_yh_gaz" msprop:Generator_ColumnVarNameInTable="columnt_yh_gaz" msprop:Generator_ColumnPropNameInRow="t_yh_gaz" msprop:Generator_ColumnPropNameInTable="t_yh_gazColumn" msprop:Generator_UserColumnName="t_yh_gaz" type="xs:int" />
@@ -1159,7 +1159,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="region" msprop:Generator_TableClassName="regionDataTable" msprop:Generator_TableVarName="tableregion" msprop:Generator_TablePropName="region" msprop:Generator_RowDeletingName="regionRowDeleting" msprop:Generator_RowChangingName="regionRowChanging" msprop:Generator_RowEvHandlerName="regionRowChangeEventHandler" msprop:Generator_RowDeletedName="regionRowDeleted" msprop:Generator_UserTableName="region" msprop:Generator_RowChangedName="regionRowChanged" msprop:Generator_RowEvArgName="regionRowChangeEvent" msprop:Generator_RowClassName="regionRow">
+        <xs:element name="region" msprop:Generator_TableClassName="regionDataTable" msprop:Generator_TableVarName="tableregion" msprop:Generator_RowChangedName="regionRowChanged" msprop:Generator_TablePropName="region" msprop:Generator_RowDeletingName="regionRowDeleting" msprop:Generator_RowChangingName="regionRowChanging" msprop:Generator_RowEvHandlerName="regionRowChangeEventHandler" msprop:Generator_RowDeletedName="regionRowDeleted" msprop:Generator_RowClassName="regionRow" msprop:Generator_UserTableName="region" msprop:Generator_RowEvArgName="regionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="keyRegion" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnkeyRegion" msprop:Generator_ColumnPropNameInRow="keyRegion" msprop:Generator_ColumnPropNameInTable="keyRegionColumn" msprop:Generator_UserColumnName="keyRegion" type="xs:int" />
@@ -1173,7 +1173,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="season" msprop:Generator_TableClassName="seasonDataTable" msprop:Generator_TableVarName="tableseason" msprop:Generator_TablePropName="season" msprop:Generator_RowDeletingName="seasonRowDeleting" msprop:Generator_RowChangingName="seasonRowChanging" msprop:Generator_RowEvHandlerName="seasonRowChangeEventHandler" msprop:Generator_RowDeletedName="seasonRowDeleted" msprop:Generator_UserTableName="season" msprop:Generator_RowChangedName="seasonRowChanged" msprop:Generator_RowEvArgName="seasonRowChangeEvent" msprop:Generator_RowClassName="seasonRow">
+        <xs:element name="season" msprop:Generator_TableClassName="seasonDataTable" msprop:Generator_TableVarName="tableseason" msprop:Generator_RowChangedName="seasonRowChanged" msprop:Generator_TablePropName="season" msprop:Generator_RowDeletingName="seasonRowDeleting" msprop:Generator_RowChangingName="seasonRowChanging" msprop:Generator_RowEvHandlerName="seasonRowChangeEventHandler" msprop:Generator_RowDeletedName="seasonRowDeleted" msprop:Generator_RowClassName="seasonRow" msprop:Generator_UserTableName="season" msprop:Generator_RowEvArgName="seasonRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="keySeason" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnkeySeason" msprop:Generator_ColumnPropNameInRow="keySeason" msprop:Generator_ColumnPropNameInTable="keySeasonColumn" msprop:Generator_UserColumnName="keySeason" type="xs:int" />
@@ -1240,14 +1240,14 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="regiontemperature" msdata:parent="region" msdata:child="temperature" msdata:parentkey="keyRegion" msdata:childkey="codeRegion" msprop:Generator_UserChildTable="temperature" msprop:Generator_ChildPropName="GettemperatureRows" msprop:Generator_UserRelationName="regiontemperature" msprop:Generator_RelationVarName="relationregiontemperature" msprop:Generator_UserParentTable="region" msprop:Generator_ParentPropName="regionRow" />
-      <msdata:Relationship name="seasontemperature" msdata:parent="season" msdata:child="temperature" msdata:parentkey="keySeason" msdata:childkey="codeSeason" msprop:Generator_UserChildTable="temperature" msprop:Generator_ChildPropName="GettemperatureRows" msprop:Generator_UserRelationName="seasontemperature" msprop:Generator_RelationVarName="relationseasontemperature" msprop:Generator_UserParentTable="season" msprop:Generator_ParentPropName="seasonRow" />
-      <msdata:Relationship name="boilerboiler_gabarit_steam" msdata:parent="boiler" msdata:child="boiler_gabarit_steam" msdata:parentkey="keyBoiler" msdata:childkey="tipBoiler" msprop:Generator_UserChildTable="boiler_gabarit_steam" msprop:Generator_ChildPropName="Getboiler_gabarit_steamRows" msprop:Generator_UserRelationName="boilerboiler_gabarit_steam" msprop:Generator_ParentPropName="boilerRow" msprop:Generator_RelationVarName="relationboilerboiler_gabarit_steam" msprop:Generator_UserParentTable="boiler" />
-      <msdata:Relationship name="boilerboiler_gabarit_water_gaz_x002F_zhidkoe" msdata:parent="boiler" msdata:child="boiler_gabarit_water_gaz_x002F_zhidkoe" msdata:parentkey="keyBoiler" msdata:childkey="tipBoiler" msprop:Generator_UserChildTable="boiler_gabarit_water_gaz/zhidkoe" msprop:Generator_ChildPropName="_Getboiler_gabarit_water_gaz_zhidkoeRows" msprop:Generator_UserRelationName="boilerboiler_gabarit_water_gaz/zhidkoe" msprop:Generator_ParentPropName="boilerRow" msprop:Generator_RelationVarName="_relationboilerboiler_gabarit_water_gaz_zhidkoe" msprop:Generator_UserParentTable="boiler" />
-      <msdata:Relationship name="boilerboiler_gabarit_water_tv" msdata:parent="boiler" msdata:child="boiler_gabarit_water_tv" msdata:parentkey="keyBoiler" msdata:childkey="tipBoiler" msprop:Generator_UserChildTable="boiler_gabarit_water_tv" msprop:Generator_ChildPropName="Getboiler_gabarit_water_tvRows" msprop:Generator_UserRelationName="boilerboiler_gabarit_water_tv" msprop:Generator_ParentPropName="boilerRow" msprop:Generator_RelationVarName="relationboilerboiler_gabarit_water_tv" msprop:Generator_UserParentTable="boiler" />
-      <msdata:Relationship name="fuelchar_gaz" msdata:parent="fuel" msdata:child="char_gaz" msdata:parentkey="keyFuel" msdata:childkey="tipFuel" msprop:Generator_UserChildTable="char_gaz" msprop:Generator_ChildPropName="Getchar_gazRows" msprop:Generator_UserRelationName="fuelchar_gaz" msprop:Generator_RelationVarName="relationfuelchar_gaz" msprop:Generator_UserParentTable="fuel" msprop:Generator_ParentPropName="fuelRow" />
-      <msdata:Relationship name="fuelchar_tv" msdata:parent="fuel" msdata:child="char_tv" msdata:parentkey="keyFuel" msdata:childkey="tipFuel" msprop:Generator_UserChildTable="char_tv" msprop:Generator_ChildPropName="Getchar_tvRows" msprop:Generator_UserRelationName="fuelchar_tv" msprop:Generator_RelationVarName="relationfuelchar_tv" msprop:Generator_UserParentTable="fuel" msprop:Generator_ParentPropName="fuelRow" />
-      <msdata:Relationship name="fuelchar_zhidkoe" msdata:parent="fuel" msdata:child="char_zhidkoe" msdata:parentkey="keyFuel" msdata:childkey="tipFuel" msprop:Generator_UserChildTable="char_zhidkoe" msprop:Generator_ChildPropName="Getchar_zhidkoeRows" msprop:Generator_UserRelationName="fuelchar_zhidkoe" msprop:Generator_RelationVarName="relationfuelchar_zhidkoe" msprop:Generator_UserParentTable="fuel" msprop:Generator_ParentPropName="fuelRow" />
+      <msdata:Relationship name="regiontemperature" msdata:parent="region" msdata:child="temperature" msdata:parentkey="keyRegion" msdata:childkey="codeRegion" msprop:Generator_UserChildTable="temperature" msprop:Generator_ChildPropName="GettemperatureRows" msprop:Generator_UserRelationName="regiontemperature" msprop:Generator_ParentPropName="regionRow" msprop:Generator_RelationVarName="relationregiontemperature" msprop:Generator_UserParentTable="region" />
+      <msdata:Relationship name="seasontemperature" msdata:parent="season" msdata:child="temperature" msdata:parentkey="keySeason" msdata:childkey="codeSeason" msprop:Generator_UserChildTable="temperature" msprop:Generator_ChildPropName="GettemperatureRows" msprop:Generator_UserRelationName="seasontemperature" msprop:Generator_ParentPropName="seasonRow" msprop:Generator_RelationVarName="relationseasontemperature" msprop:Generator_UserParentTable="season" />
+      <msdata:Relationship name="boilerboiler_gabarit_steam" msdata:parent="boiler" msdata:child="boiler_gabarit_steam" msdata:parentkey="keyBoiler" msdata:childkey="Boiler" msprop:Generator_UserChildTable="boiler_gabarit_steam" msprop:Generator_ChildPropName="Getboiler_gabarit_steamRows" msprop:Generator_UserRelationName="boilerboiler_gabarit_steam" msprop:Generator_RelationVarName="relationboilerboiler_gabarit_steam" msprop:Generator_UserParentTable="boiler" msprop:Generator_ParentPropName="boilerRow" />
+      <msdata:Relationship name="boilerboiler_gabarit_water_gaz_x002F_zhidkoe" msdata:parent="boiler" msdata:child="boiler_gabarit_water_gaz_x002F_zhidkoe" msdata:parentkey="keyBoiler" msdata:childkey="Boiler" msprop:Generator_UserChildTable="boiler_gabarit_water_gaz/zhidkoe" msprop:Generator_ChildPropName="_Getboiler_gabarit_water_gaz_zhidkoeRows" msprop:Generator_UserRelationName="boilerboiler_gabarit_water_gaz/zhidkoe" msprop:Generator_RelationVarName="_relationboilerboiler_gabarit_water_gaz_zhidkoe" msprop:Generator_UserParentTable="boiler" msprop:Generator_ParentPropName="boilerRow" />
+      <msdata:Relationship name="boilerboiler_gabarit_water_tv" msdata:parent="boiler" msdata:child="boiler_gabarit_water_tv" msdata:parentkey="keyBoiler" msdata:childkey="Boiler" msprop:Generator_UserChildTable="boiler_gabarit_water_tv" msprop:Generator_ChildPropName="Getboiler_gabarit_water_tvRows" msprop:Generator_UserRelationName="boilerboiler_gabarit_water_tv" msprop:Generator_RelationVarName="relationboilerboiler_gabarit_water_tv" msprop:Generator_UserParentTable="boiler" msprop:Generator_ParentPropName="boilerRow" />
+      <msdata:Relationship name="fuelchar_gaz" msdata:parent="fuel" msdata:child="char_gaz" msdata:parentkey="keyFuel" msdata:childkey="Fuel" msprop:Generator_UserChildTable="char_gaz" msprop:Generator_ChildPropName="Getchar_gazRows" msprop:Generator_UserRelationName="fuelchar_gaz" msprop:Generator_ParentPropName="fuelRow" msprop:Generator_RelationVarName="relationfuelchar_gaz" msprop:Generator_UserParentTable="fuel" />
+      <msdata:Relationship name="fuelchar_tv" msdata:parent="fuel" msdata:child="char_tv" msdata:parentkey="keyFuel" msdata:childkey="Fuel" msprop:Generator_UserChildTable="char_tv" msprop:Generator_ChildPropName="Getchar_tvRows" msprop:Generator_UserRelationName="fuelchar_tv" msprop:Generator_ParentPropName="fuelRow" msprop:Generator_RelationVarName="relationfuelchar_tv" msprop:Generator_UserParentTable="fuel" />
+      <msdata:Relationship name="fuelchar_zhidkoe" msdata:parent="fuel" msdata:child="char_zhidkoe" msdata:parentkey="keyFuel" msdata:childkey="Fuel" msprop:Generator_UserChildTable="char_zhidkoe" msprop:Generator_ChildPropName="Getchar_zhidkoeRows" msprop:Generator_UserRelationName="fuelchar_zhidkoe" msprop:Generator_ParentPropName="fuelRow" msprop:Generator_RelationVarName="relationfuelchar_zhidkoe" msprop:Generator_UserParentTable="fuel" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

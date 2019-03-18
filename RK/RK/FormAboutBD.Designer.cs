@@ -35,7 +35,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(143, 181);
+            this.btnOK.Location = new System.Drawing.Point(146, 166);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(182, 34);
             this.btnOK.TabIndex = 0;
@@ -56,7 +56,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 237);
+            this.BackgroundImage = global::RK.Properties.Resources.Nuclear_Recruitment;
+            this.ClientSize = new System.Drawing.Size(479, 244);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
             this.Name = "FormAboutBD";

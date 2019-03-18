@@ -526,27 +526,27 @@ namespace RK {
             this.Relations.Add(this.relationseasontemperature);
             this.relationboilerboiler_gabarit_steam = new global::System.Data.DataRelation("boilerboiler_gabarit_steam", new global::System.Data.DataColumn[] {
                         this.tableboiler.keyBoilerColumn}, new global::System.Data.DataColumn[] {
-                        this.tableboiler_gabarit_steam.tipBoilerColumn}, false);
+                        this.tableboiler_gabarit_steam.BoilerColumn}, false);
             this.Relations.Add(this.relationboilerboiler_gabarit_steam);
             this._relationboilerboiler_gabarit_water_gaz_zhidkoe = new global::System.Data.DataRelation("boilerboiler_gabarit_water_gaz/zhidkoe", new global::System.Data.DataColumn[] {
                         this.tableboiler.keyBoilerColumn}, new global::System.Data.DataColumn[] {
-                        this._tableboiler_gabarit_water_gaz_zhidkoe.tipBoilerColumn}, false);
+                        this._tableboiler_gabarit_water_gaz_zhidkoe.BoilerColumn}, false);
             this.Relations.Add(this._relationboilerboiler_gabarit_water_gaz_zhidkoe);
             this.relationboilerboiler_gabarit_water_tv = new global::System.Data.DataRelation("boilerboiler_gabarit_water_tv", new global::System.Data.DataColumn[] {
                         this.tableboiler.keyBoilerColumn}, new global::System.Data.DataColumn[] {
-                        this.tableboiler_gabarit_water_tv.tipBoilerColumn}, false);
+                        this.tableboiler_gabarit_water_tv.BoilerColumn}, false);
             this.Relations.Add(this.relationboilerboiler_gabarit_water_tv);
             this.relationfuelchar_gaz = new global::System.Data.DataRelation("fuelchar_gaz", new global::System.Data.DataColumn[] {
                         this.tablefuel.keyFuelColumn}, new global::System.Data.DataColumn[] {
-                        this.tablechar_gaz.tipFuelColumn}, false);
+                        this.tablechar_gaz.FuelColumn}, false);
             this.Relations.Add(this.relationfuelchar_gaz);
             this.relationfuelchar_tv = new global::System.Data.DataRelation("fuelchar_tv", new global::System.Data.DataColumn[] {
                         this.tablefuel.keyFuelColumn}, new global::System.Data.DataColumn[] {
-                        this.tablechar_tv.tipFuelColumn}, false);
+                        this.tablechar_tv.FuelColumn}, false);
             this.Relations.Add(this.relationfuelchar_tv);
             this.relationfuelchar_zhidkoe = new global::System.Data.DataRelation("fuelchar_zhidkoe", new global::System.Data.DataColumn[] {
                         this.tablefuel.keyFuelColumn}, new global::System.Data.DataColumn[] {
-                        this.tablechar_zhidkoe.tipFuelColumn}, false);
+                        this.tablechar_zhidkoe.FuelColumn}, false);
             this.Relations.Add(this.relationfuelchar_zhidkoe);
         }
         
@@ -1321,9 +1321,9 @@ namespace RK {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columntipBoiler;
+            private global::System.Data.DataColumn columnBoiler;
             
-            private global::System.Data.DataColumn columnNaimenovanie;
+            private global::System.Data.DataColumn columntipBoiler;
             
             private global::System.Data.DataColumn _columnF_m2;
             
@@ -1384,17 +1384,17 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tipBoilerColumn {
+            public global::System.Data.DataColumn BoilerColumn {
                 get {
-                    return this.columntipBoiler;
+                    return this.columnBoiler;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NaimenovanieColumn {
+            public global::System.Data.DataColumn tipBoilerColumn {
                 get {
-                    return this.columnNaimenovanie;
+                    return this.columntipBoiler;
                 }
             }
             
@@ -1499,12 +1499,12 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public boiler_gabarit_steamRow Addboiler_gabarit_steamRow(boilerRow parentboilerRowByboilerboiler_gabarit_steam, string Naimenovanie, float _F_m2, float _tf_0C, int _L_mm, int _a_mm, int _h_mm, float _dPk_MPa, float _Gpv_m3_ch, float _tpv_0C) {
+            public boiler_gabarit_steamRow Addboiler_gabarit_steamRow(boilerRow parentboilerRowByboilerboiler_gabarit_steam, string tipBoiler, float _F_m2, float _tf_0C, int _L_mm, int _a_mm, int _h_mm, float _dPk_MPa, float _Gpv_m3_ch, float _tpv_0C) {
                 boiler_gabarit_steamRow rowboiler_gabarit_steamRow = ((boiler_gabarit_steamRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        Naimenovanie,
+                        tipBoiler,
                         _F_m2,
                         _tf_0C,
                         _L_mm,
@@ -1546,8 +1546,8 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
+                this.columnBoiler = base.Columns["Boiler"];
                 this.columntipBoiler = base.Columns["tipBoiler"];
-                this.columnNaimenovanie = base.Columns["Naimenovanie"];
                 this._columnF_m2 = base.Columns["F,m2"];
                 this._columntf_0C = base.Columns["tf,0C"];
                 this._columnL_mm = base.Columns["L,mm"];
@@ -1563,10 +1563,10 @@ namespace RK {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columntipBoiler = new global::System.Data.DataColumn("tipBoiler", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnBoiler = new global::System.Data.DataColumn("Boiler", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBoiler);
+                this.columntipBoiler = new global::System.Data.DataColumn("tipBoiler", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipBoiler);
-                this.columnNaimenovanie = new global::System.Data.DataColumn("Naimenovanie", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNaimenovanie);
                 this._columnF_m2 = new global::System.Data.DataColumn("F,m2", typeof(float), null, global::System.Data.MappingType.Element);
                 this._columnF_m2.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnF_m2");
                 this._columnF_m2.ExtendedProperties.Add("Generator_UserColumnName", "F,m2");
@@ -1606,7 +1606,7 @@ namespace RK {
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnNaimenovanie.MaxLength = 255;
+                this.columntipBoiler.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1742,9 +1742,9 @@ namespace RK {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columntipBoiler;
+            private global::System.Data.DataColumn columnBoiler;
             
-            private global::System.Data.DataColumn columnNaimenovanie;
+            private global::System.Data.DataColumn columntipBoiler;
             
             private global::System.Data.DataColumn _columnF_m2;
             
@@ -1801,17 +1801,17 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tipBoilerColumn {
+            public global::System.Data.DataColumn BoilerColumn {
                 get {
-                    return this.columntipBoiler;
+                    return this.columnBoiler;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NaimenovanieColumn {
+            public global::System.Data.DataColumn tipBoilerColumn {
                 get {
-                    return this.columnNaimenovanie;
+                    return this.columntipBoiler;
                 }
             }
             
@@ -1900,12 +1900,12 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _boiler_gabarit_water_gaz_zhidkoeRow Add_boiler_gabarit_water_gaz_zhidkoeRow(boilerRow _parentboilerRowByboilerboiler_gabarit_water_gaz_zhidkoe, string Naimenovanie, float _F_m2, float _tf_0C, int _L_mm, int _a_mm, int _h_mm, float _dPk_MPa) {
+            public _boiler_gabarit_water_gaz_zhidkoeRow Add_boiler_gabarit_water_gaz_zhidkoeRow(boilerRow _parentboilerRowByboilerboiler_gabarit_water_gaz_zhidkoe, string tipBoiler, float _F_m2, float _tf_0C, int _L_mm, int _a_mm, int _h_mm, float _dPk_MPa) {
                 _boiler_gabarit_water_gaz_zhidkoeRow row_boiler_gabarit_water_gaz_zhidkoeRow = ((_boiler_gabarit_water_gaz_zhidkoeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        Naimenovanie,
+                        tipBoiler,
                         _F_m2,
                         _tf_0C,
                         _L_mm,
@@ -1945,8 +1945,8 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
+                this.columnBoiler = base.Columns["Boiler"];
                 this.columntipBoiler = base.Columns["tipBoiler"];
-                this.columnNaimenovanie = base.Columns["Naimenovanie"];
                 this._columnF_m2 = base.Columns["F,m2"];
                 this._columntf_0C = base.Columns["tf,0C"];
                 this._columnL_mm = base.Columns["L,mm"];
@@ -1960,10 +1960,10 @@ namespace RK {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columntipBoiler = new global::System.Data.DataColumn("tipBoiler", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnBoiler = new global::System.Data.DataColumn("Boiler", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBoiler);
+                this.columntipBoiler = new global::System.Data.DataColumn("tipBoiler", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipBoiler);
-                this.columnNaimenovanie = new global::System.Data.DataColumn("Naimenovanie", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNaimenovanie);
                 this._columnF_m2 = new global::System.Data.DataColumn("F,m2", typeof(float), null, global::System.Data.MappingType.Element);
                 this._columnF_m2.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnF_m2");
                 this._columnF_m2.ExtendedProperties.Add("Generator_UserColumnName", "F,m2");
@@ -1995,7 +1995,7 @@ namespace RK {
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnNaimenovanie.MaxLength = 255;
+                this.columntipBoiler.MaxLength = 255;
                 this.ExtendedProperties.Add("Generator_TableVarName", "_tableboiler_gabarit_water_gaz_zhidkoe");
                 this.ExtendedProperties.Add("Generator_UserTableName", "boiler_gabarit_water_gaz/zhidkoe");
             }
@@ -2133,9 +2133,9 @@ namespace RK {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columntipBoiler;
+            private global::System.Data.DataColumn columnBoiler;
             
-            private global::System.Data.DataColumn columnNaimenovanie;
+            private global::System.Data.DataColumn columntipBoiler;
             
             private global::System.Data.DataColumn _columnF_m2;
             
@@ -2192,17 +2192,17 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tipBoilerColumn {
+            public global::System.Data.DataColumn BoilerColumn {
                 get {
-                    return this.columntipBoiler;
+                    return this.columnBoiler;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NaimenovanieColumn {
+            public global::System.Data.DataColumn tipBoilerColumn {
                 get {
-                    return this.columnNaimenovanie;
+                    return this.columntipBoiler;
                 }
             }
             
@@ -2291,12 +2291,12 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public boiler_gabarit_water_tvRow Addboiler_gabarit_water_tvRow(boilerRow parentboilerRowByboilerboiler_gabarit_water_tv, string Naimenovanie, float _F_m2, float _tf_0C, int _L_mm, int _a_mm, int _h_mm, float _dPk_MPa) {
+            public boiler_gabarit_water_tvRow Addboiler_gabarit_water_tvRow(boilerRow parentboilerRowByboilerboiler_gabarit_water_tv, string tipBoiler, float _F_m2, float _tf_0C, int _L_mm, int _a_mm, int _h_mm, float _dPk_MPa) {
                 boiler_gabarit_water_tvRow rowboiler_gabarit_water_tvRow = ((boiler_gabarit_water_tvRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        Naimenovanie,
+                        tipBoiler,
                         _F_m2,
                         _tf_0C,
                         _L_mm,
@@ -2336,8 +2336,8 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
+                this.columnBoiler = base.Columns["Boiler"];
                 this.columntipBoiler = base.Columns["tipBoiler"];
-                this.columnNaimenovanie = base.Columns["Naimenovanie"];
                 this._columnF_m2 = base.Columns["F,m2"];
                 this._columntf_0C = base.Columns["tf,0C"];
                 this._columnL_mm = base.Columns["L,mm"];
@@ -2351,10 +2351,10 @@ namespace RK {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columntipBoiler = new global::System.Data.DataColumn("tipBoiler", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnBoiler = new global::System.Data.DataColumn("Boiler", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBoiler);
+                this.columntipBoiler = new global::System.Data.DataColumn("tipBoiler", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipBoiler);
-                this.columnNaimenovanie = new global::System.Data.DataColumn("Naimenovanie", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNaimenovanie);
                 this._columnF_m2 = new global::System.Data.DataColumn("F,m2", typeof(float), null, global::System.Data.MappingType.Element);
                 this._columnF_m2.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnF_m2");
                 this._columnF_m2.ExtendedProperties.Add("Generator_UserColumnName", "F,m2");
@@ -2386,7 +2386,7 @@ namespace RK {
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnNaimenovanie.MaxLength = 255;
+                this.columntipBoiler.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2522,9 +2522,9 @@ namespace RK {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columntipFuel;
+            private global::System.Data.DataColumn columnFuel;
             
-            private global::System.Data.DataColumn columnNameFuel;
+            private global::System.Data.DataColumn columntipFuel;
             
             private global::System.Data.DataColumn columnQpn;
             
@@ -2581,17 +2581,17 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tipFuelColumn {
+            public global::System.Data.DataColumn FuelColumn {
                 get {
-                    return this.columntipFuel;
+                    return this.columnFuel;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NameFuelColumn {
+            public global::System.Data.DataColumn tipFuelColumn {
                 get {
-                    return this.columnNameFuel;
+                    return this.columntipFuel;
                 }
             }
             
@@ -2680,12 +2680,12 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public char_gazRow Addchar_gazRow(int id, fuelRow parentfuelRowByfuelchar_gaz, string NameFuel, float Qpn, float _tmax_0C, float C2, float H2, float _qt_kkal_m3, float B) {
+            public char_gazRow Addchar_gazRow(int id, fuelRow parentfuelRowByfuelchar_gaz, string tipFuel, float Qpn, float _tmax_0C, float C2, float H2, float _qt_kkal_m3, float B) {
                 char_gazRow rowchar_gazRow = ((char_gazRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         null,
-                        NameFuel,
+                        tipFuel,
                         Qpn,
                         _tmax_0C,
                         C2,
@@ -2725,8 +2725,8 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
+                this.columnFuel = base.Columns["Fuel"];
                 this.columntipFuel = base.Columns["tipFuel"];
-                this.columnNameFuel = base.Columns["NameFuel"];
                 this.columnQpn = base.Columns["Qpn"];
                 this._columntmax_0C = base.Columns["tmax,0C"];
                 this.columnC2 = base.Columns["C2"];
@@ -2740,10 +2740,10 @@ namespace RK {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columntipFuel = new global::System.Data.DataColumn("tipFuel", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnFuel = new global::System.Data.DataColumn("Fuel", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFuel);
+                this.columntipFuel = new global::System.Data.DataColumn("tipFuel", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipFuel);
-                this.columnNameFuel = new global::System.Data.DataColumn("NameFuel", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNameFuel);
                 this.columnQpn = new global::System.Data.DataColumn("Qpn", typeof(float), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQpn);
                 this._columntmax_0C = new global::System.Data.DataColumn("tmax,0C", typeof(float), null, global::System.Data.MappingType.Element);
@@ -2764,7 +2764,7 @@ namespace RK {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnNameFuel.MaxLength = 40;
+                this.columntipFuel.MaxLength = 40;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2900,9 +2900,9 @@ namespace RK {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columntipFuel;
+            private global::System.Data.DataColumn columnFuel;
             
-            private global::System.Data.DataColumn columnNameFuel;
+            private global::System.Data.DataColumn columntipFuel;
             
             private global::System.Data.DataColumn columnQpn;
             
@@ -2969,17 +2969,17 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tipFuelColumn {
+            public global::System.Data.DataColumn FuelColumn {
                 get {
-                    return this.columntipFuel;
+                    return this.columnFuel;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NameFuelColumn {
+            public global::System.Data.DataColumn tipFuelColumn {
                 get {
-                    return this.columnNameFuel;
+                    return this.columntipFuel;
                 }
             }
             
@@ -3108,12 +3108,12 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public char_tvRow Addchar_tvRow(int id, fuelRow parentfuelRowByfuelchar_tv, string NameFuel, int Qpn, int _tmax_0C, float _H2__, float _C2__, float _O2__, float _N2__, float _S2__, float _A__, float _W__, int _qt_kkal_kg, float B) {
+            public char_tvRow Addchar_tvRow(int id, fuelRow parentfuelRowByfuelchar_tv, string tipFuel, int Qpn, int _tmax_0C, float _H2__, float _C2__, float _O2__, float _N2__, float _S2__, float _A__, float _W__, int _qt_kkal_kg, float B) {
                 char_tvRow rowchar_tvRow = ((char_tvRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         null,
-                        NameFuel,
+                        tipFuel,
                         Qpn,
                         _tmax_0C,
                         _H2__,
@@ -3158,8 +3158,8 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
+                this.columnFuel = base.Columns["Fuel"];
                 this.columntipFuel = base.Columns["tipFuel"];
-                this.columnNameFuel = base.Columns["NameFuel"];
                 this.columnQpn = base.Columns["Qpn"];
                 this._columntmax_0C = base.Columns["tmax,0C"];
                 this._columnH2__ = base.Columns["H2,%"];
@@ -3178,10 +3178,10 @@ namespace RK {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columntipFuel = new global::System.Data.DataColumn("tipFuel", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnFuel = new global::System.Data.DataColumn("Fuel", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFuel);
+                this.columntipFuel = new global::System.Data.DataColumn("tipFuel", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipFuel);
-                this.columnNameFuel = new global::System.Data.DataColumn("NameFuel", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNameFuel);
                 this.columnQpn = new global::System.Data.DataColumn("Qpn", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQpn);
                 this._columntmax_0C = new global::System.Data.DataColumn("tmax,0C", typeof(int), null, global::System.Data.MappingType.Element);
@@ -3226,7 +3226,7 @@ namespace RK {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnNameFuel.MaxLength = 40;
+                this.columntipFuel.MaxLength = 40;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3362,9 +3362,9 @@ namespace RK {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columntipFuel;
+            private global::System.Data.DataColumn columnFuel;
             
-            private global::System.Data.DataColumn columnNameFuel;
+            private global::System.Data.DataColumn columntipFuel;
             
             private global::System.Data.DataColumn columnQpn;
             
@@ -3429,17 +3429,17 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tipFuelColumn {
+            public global::System.Data.DataColumn FuelColumn {
                 get {
-                    return this.columntipFuel;
+                    return this.columnFuel;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NameFuelColumn {
+            public global::System.Data.DataColumn tipFuelColumn {
                 get {
-                    return this.columnNameFuel;
+                    return this.columntipFuel;
                 }
             }
             
@@ -3560,12 +3560,12 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public char_zhidkoeRow Addchar_zhidkoeRow(int id, fuelRow parentfuelRowByfuelchar_zhidkoe, string NameFuel, int Qpn, int _tmax_0C, float _H2__, float _C2__, float _O2__, float _N2__, float _S2__, float _W__, int _qt_kkal_m3, float B) {
+            public char_zhidkoeRow Addchar_zhidkoeRow(int id, fuelRow parentfuelRowByfuelchar_zhidkoe, string tipFuel, int Qpn, int _tmax_0C, float _H2__, float _C2__, float _O2__, float _N2__, float _S2__, float _W__, int _qt_kkal_m3, float B) {
                 char_zhidkoeRow rowchar_zhidkoeRow = ((char_zhidkoeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         null,
-                        NameFuel,
+                        tipFuel,
                         Qpn,
                         _tmax_0C,
                         _H2__,
@@ -3609,8 +3609,8 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
+                this.columnFuel = base.Columns["Fuel"];
                 this.columntipFuel = base.Columns["tipFuel"];
-                this.columnNameFuel = base.Columns["NameFuel"];
                 this.columnQpn = base.Columns["Qpn"];
                 this._columntmax_0C = base.Columns["tmax,0C"];
                 this._columnH2__ = base.Columns["H2,%"];
@@ -3628,10 +3628,10 @@ namespace RK {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columntipFuel = new global::System.Data.DataColumn("tipFuel", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnFuel = new global::System.Data.DataColumn("Fuel", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFuel);
+                this.columntipFuel = new global::System.Data.DataColumn("tipFuel", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipFuel);
-                this.columnNameFuel = new global::System.Data.DataColumn("NameFuel", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNameFuel);
                 this.columnQpn = new global::System.Data.DataColumn("Qpn", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQpn);
                 this._columntmax_0C = new global::System.Data.DataColumn("tmax,0C", typeof(int), null, global::System.Data.MappingType.Element);
@@ -3672,7 +3672,7 @@ namespace RK {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnNameFuel.MaxLength = 40;
+                this.columntipFuel.MaxLength = 40;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5189,10 +5189,26 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int tipBoiler {
+            public int Boiler {
                 get {
                     try {
-                        return ((int)(this[this.tableboiler_gabarit_steam.tipBoilerColumn]));
+                        return ((int)(this[this.tableboiler_gabarit_steam.BoilerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Boiler\' в таблице \'boiler_gabarit_steam\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableboiler_gabarit_steam.BoilerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipBoiler {
+                get {
+                    try {
+                        return ((string)(this[this.tableboiler_gabarit_steam.tipBoilerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'tipBoiler\' в таблице \'boiler_gabarit_steam\' равно DBNull.", e);
@@ -5200,23 +5216,6 @@ namespace RK {
                 }
                 set {
                     this[this.tableboiler_gabarit_steam.tipBoilerColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Naimenovanie {
-                get {
-                    try {
-                        return ((string)(this[this.tableboiler_gabarit_steam.NaimenovanieColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Naimenovanie\' в таблице \'boiler_gabarit_steam\' равно DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableboiler_gabarit_steam.NaimenovanieColumn] = value;
                 }
             }
             
@@ -5361,6 +5360,18 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBoilerNull() {
+                return this.IsNull(this.tableboiler_gabarit_steam.BoilerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBoilerNull() {
+                this[this.tableboiler_gabarit_steam.BoilerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstipBoilerNull() {
                 return this.IsNull(this.tableboiler_gabarit_steam.tipBoilerColumn);
             }
@@ -5369,18 +5380,6 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettipBoilerNull() {
                 this[this.tableboiler_gabarit_steam.tipBoilerColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNaimenovanieNull() {
-                return this.IsNull(this.tableboiler_gabarit_steam.NaimenovanieColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNaimenovanieNull() {
-                this[this.tableboiler_gabarit_steam.NaimenovanieColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5507,10 +5506,27 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int tipBoiler {
+            public int Boiler {
                 get {
                     try {
-                        return ((int)(this[this._tableboiler_gabarit_water_gaz_zhidkoe.tipBoilerColumn]));
+                        return ((int)(this[this._tableboiler_gabarit_water_gaz_zhidkoe.BoilerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Boiler\' в таблице \'boiler_gabarit_water_gaz/zhidkoe\' равно " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableboiler_gabarit_water_gaz_zhidkoe.BoilerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipBoiler {
+                get {
+                    try {
+                        return ((string)(this[this._tableboiler_gabarit_water_gaz_zhidkoe.tipBoilerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'tipBoiler\' в таблице \'boiler_gabarit_water_gaz/zhidkoe\' рав" +
@@ -5519,23 +5535,6 @@ namespace RK {
                 }
                 set {
                     this[this._tableboiler_gabarit_water_gaz_zhidkoe.tipBoilerColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Naimenovanie {
-                get {
-                    try {
-                        return ((string)(this[this._tableboiler_gabarit_water_gaz_zhidkoe.NaimenovanieColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Naimenovanie\' в таблице \'boiler_gabarit_water_gaz/zhidkoe\' " +
-                                "равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this._tableboiler_gabarit_water_gaz_zhidkoe.NaimenovanieColumn] = value;
                 }
             }
             
@@ -5654,6 +5653,18 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBoilerNull() {
+                return this.IsNull(this._tableboiler_gabarit_water_gaz_zhidkoe.BoilerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBoilerNull() {
+                this[this._tableboiler_gabarit_water_gaz_zhidkoe.BoilerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstipBoilerNull() {
                 return this.IsNull(this._tableboiler_gabarit_water_gaz_zhidkoe.tipBoilerColumn);
             }
@@ -5662,18 +5673,6 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettipBoilerNull() {
                 this[this._tableboiler_gabarit_water_gaz_zhidkoe.tipBoilerColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNaimenovanieNull() {
-                return this.IsNull(this._tableboiler_gabarit_water_gaz_zhidkoe.NaimenovanieColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNaimenovanieNull() {
-                this[this._tableboiler_gabarit_water_gaz_zhidkoe.NaimenovanieColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5776,10 +5775,26 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int tipBoiler {
+            public int Boiler {
                 get {
                     try {
-                        return ((int)(this[this.tableboiler_gabarit_water_tv.tipBoilerColumn]));
+                        return ((int)(this[this.tableboiler_gabarit_water_tv.BoilerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Boiler\' в таблице \'boiler_gabarit_water_tv\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableboiler_gabarit_water_tv.BoilerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipBoiler {
+                get {
+                    try {
+                        return ((string)(this[this.tableboiler_gabarit_water_tv.tipBoilerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'tipBoiler\' в таблице \'boiler_gabarit_water_tv\' равно DBNull" +
@@ -5788,23 +5803,6 @@ namespace RK {
                 }
                 set {
                     this[this.tableboiler_gabarit_water_tv.tipBoilerColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Naimenovanie {
-                get {
-                    try {
-                        return ((string)(this[this.tableboiler_gabarit_water_tv.NaimenovanieColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Naimenovanie\' в таблице \'boiler_gabarit_water_tv\' равно DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableboiler_gabarit_water_tv.NaimenovanieColumn] = value;
                 }
             }
             
@@ -5917,6 +5915,18 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBoilerNull() {
+                return this.IsNull(this.tableboiler_gabarit_water_tv.BoilerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBoilerNull() {
+                this[this.tableboiler_gabarit_water_tv.BoilerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstipBoilerNull() {
                 return this.IsNull(this.tableboiler_gabarit_water_tv.tipBoilerColumn);
             }
@@ -5925,18 +5935,6 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettipBoilerNull() {
                 this[this.tableboiler_gabarit_water_tv.tipBoilerColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNaimenovanieNull() {
-                return this.IsNull(this.tableboiler_gabarit_water_tv.NaimenovanieColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNaimenovanieNull() {
-                this[this.tableboiler_gabarit_water_tv.NaimenovanieColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6039,10 +6037,26 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int tipFuel {
+            public int Fuel {
                 get {
                     try {
-                        return ((int)(this[this.tablechar_gaz.tipFuelColumn]));
+                        return ((int)(this[this.tablechar_gaz.FuelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Fuel\' в таблице \'char_gaz\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechar_gaz.FuelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipFuel {
+                get {
+                    try {
+                        return ((string)(this[this.tablechar_gaz.tipFuelColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'tipFuel\' в таблице \'char_gaz\' равно DBNull.", e);
@@ -6050,22 +6064,6 @@ namespace RK {
                 }
                 set {
                     this[this.tablechar_gaz.tipFuelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NameFuel {
-                get {
-                    try {
-                        return ((string)(this[this.tablechar_gaz.NameFuelColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'NameFuel\' в таблице \'char_gaz\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablechar_gaz.NameFuelColumn] = value;
                 }
             }
             
@@ -6178,6 +6176,18 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFuelNull() {
+                return this.IsNull(this.tablechar_gaz.FuelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFuelNull() {
+                this[this.tablechar_gaz.FuelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstipFuelNull() {
                 return this.IsNull(this.tablechar_gaz.tipFuelColumn);
             }
@@ -6186,18 +6196,6 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettipFuelNull() {
                 this[this.tablechar_gaz.tipFuelColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNameFuelNull() {
-                return this.IsNull(this.tablechar_gaz.NameFuelColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNameFuelNull() {
-                this[this.tablechar_gaz.NameFuelColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6300,10 +6298,26 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int tipFuel {
+            public int Fuel {
                 get {
                     try {
-                        return ((int)(this[this.tablechar_tv.tipFuelColumn]));
+                        return ((int)(this[this.tablechar_tv.FuelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Fuel\' в таблице \'char_tv\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechar_tv.FuelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipFuel {
+                get {
+                    try {
+                        return ((string)(this[this.tablechar_tv.tipFuelColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'tipFuel\' в таблице \'char_tv\' равно DBNull.", e);
@@ -6311,22 +6325,6 @@ namespace RK {
                 }
                 set {
                     this[this.tablechar_tv.tipFuelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NameFuel {
-                get {
-                    try {
-                        return ((string)(this[this.tablechar_tv.NameFuelColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'NameFuel\' в таблице \'char_tv\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablechar_tv.NameFuelColumn] = value;
                 }
             }
             
@@ -6519,6 +6517,18 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFuelNull() {
+                return this.IsNull(this.tablechar_tv.FuelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFuelNull() {
+                this[this.tablechar_tv.FuelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstipFuelNull() {
                 return this.IsNull(this.tablechar_tv.tipFuelColumn);
             }
@@ -6527,18 +6537,6 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettipFuelNull() {
                 this[this.tablechar_tv.tipFuelColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNameFuelNull() {
-                return this.IsNull(this.tablechar_tv.NameFuelColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNameFuelNull() {
-                this[this.tablechar_tv.NameFuelColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6701,10 +6699,26 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int tipFuel {
+            public int Fuel {
                 get {
                     try {
-                        return ((int)(this[this.tablechar_zhidkoe.tipFuelColumn]));
+                        return ((int)(this[this.tablechar_zhidkoe.FuelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Fuel\' в таблице \'char_zhidkoe\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechar_zhidkoe.FuelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipFuel {
+                get {
+                    try {
+                        return ((string)(this[this.tablechar_zhidkoe.tipFuelColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'tipFuel\' в таблице \'char_zhidkoe\' равно DBNull.", e);
@@ -6712,22 +6726,6 @@ namespace RK {
                 }
                 set {
                     this[this.tablechar_zhidkoe.tipFuelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NameFuel {
-                get {
-                    try {
-                        return ((string)(this[this.tablechar_zhidkoe.NameFuelColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'NameFuel\' в таблице \'char_zhidkoe\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablechar_zhidkoe.NameFuelColumn] = value;
                 }
             }
             
@@ -6904,6 +6902,18 @@ namespace RK {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFuelNull() {
+                return this.IsNull(this.tablechar_zhidkoe.FuelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFuelNull() {
+                this[this.tablechar_zhidkoe.FuelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstipFuelNull() {
                 return this.IsNull(this.tablechar_zhidkoe.tipFuelColumn);
             }
@@ -6912,18 +6922,6 @@ namespace RK {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettipFuelNull() {
                 this[this.tablechar_zhidkoe.tipFuelColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNameFuelNull() {
-                return this.IsNull(this.tablechar_zhidkoe.NameFuelColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNameFuelNull() {
-                this[this.tablechar_zhidkoe.NameFuelColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8563,8 +8561,8 @@ namespace RK.RezhimKardDBTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "boiler_gabarit_steam";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("tipBoiler", "tipBoiler");
-            tableMapping.ColumnMappings.Add("Naimenovanie", "Naimenovanie");
+            tableMapping.ColumnMappings.Add("tipBoiler", "Boiler");
+            tableMapping.ColumnMappings.Add("Naimenovanie", "tipBoiler");
             tableMapping.ColumnMappings.Add("F,m2", "F,m2");
             tableMapping.ColumnMappings.Add("tf,0C", "tf,0C");
             tableMapping.ColumnMappings.Add("L,mm", "L,mm");
@@ -9212,8 +9210,8 @@ namespace RK.RezhimKardDBTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "boiler_gabarit_water_gaz/zhidkoe";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("tipBoiler", "tipBoiler");
-            tableMapping.ColumnMappings.Add("Naimenovanie", "Naimenovanie");
+            tableMapping.ColumnMappings.Add("tipBoiler", "Boiler");
+            tableMapping.ColumnMappings.Add("Naimenovanie", "tipBoiler");
             tableMapping.ColumnMappings.Add("F,m2", "F,m2");
             tableMapping.ColumnMappings.Add("tf,0C", "tf,0C");
             tableMapping.ColumnMappings.Add("L,mm", "L,mm");
@@ -9786,8 +9784,8 @@ namespace RK.RezhimKardDBTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "boiler_gabarit_water_tv";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("tipBoiler", "tipBoiler");
-            tableMapping.ColumnMappings.Add("Naimenovanie", "Naimenovanie");
+            tableMapping.ColumnMappings.Add("tipBoiler", "Boiler");
+            tableMapping.ColumnMappings.Add("Naimenovanie", "tipBoiler");
             tableMapping.ColumnMappings.Add("F,m2", "F,m2");
             tableMapping.ColumnMappings.Add("tf,0C", "tf,0C");
             tableMapping.ColumnMappings.Add("L,mm", "L,mm");
@@ -10360,8 +10358,8 @@ namespace RK.RezhimKardDBTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "char_gaz";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("tipFuel", "tipFuel");
-            tableMapping.ColumnMappings.Add("NameFuel", "NameFuel");
+            tableMapping.ColumnMappings.Add("tipFuel", "Fuel");
+            tableMapping.ColumnMappings.Add("NameFuel", "tipFuel");
             tableMapping.ColumnMappings.Add("Qpn", "Qpn");
             tableMapping.ColumnMappings.Add("tmax,0C", "tmax,0C");
             tableMapping.ColumnMappings.Add("C2", "C2");
@@ -10964,8 +10962,8 @@ namespace RK.RezhimKardDBTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "char_tv";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("tipFuel", "tipFuel");
-            tableMapping.ColumnMappings.Add("NameFuel", "NameFuel");
+            tableMapping.ColumnMappings.Add("tipFuel", "Fuel");
+            tableMapping.ColumnMappings.Add("NameFuel", "tipFuel");
             tableMapping.ColumnMappings.Add("Qpn", "Qpn");
             tableMapping.ColumnMappings.Add("tmax,0C", "tmax,0C");
             tableMapping.ColumnMappings.Add("H2,%", "H2,%");
@@ -11764,8 +11762,8 @@ namespace RK.RezhimKardDBTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "char_zhidkoe";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("tipFuel", "tipFuel");
-            tableMapping.ColumnMappings.Add("NameFuel", "NameFuel");
+            tableMapping.ColumnMappings.Add("tipFuel", "Fuel");
+            tableMapping.ColumnMappings.Add("NameFuel", "tipFuel");
             tableMapping.ColumnMappings.Add("Qpn", "Qpn");
             tableMapping.ColumnMappings.Add("tmax,0C", "tmax,0C");
             tableMapping.ColumnMappings.Add("H2,%", "H2,%");

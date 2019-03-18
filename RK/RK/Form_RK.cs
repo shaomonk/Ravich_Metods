@@ -18,6 +18,7 @@ namespace RK
         FormAboutBD FormAboutBD = new FormAboutBD(); // new form aboutBD
         FormSpravka FormSpravka = new FormSpravka(); // new form Spravka
         FormAboutProg FormAboutProg = new FormAboutProg(); // new form aboutProg
+        FormDataBase FormDataBase = new FormDataBase(); // new form FormDataBase
 
         public Form_RK()
         {
@@ -34,7 +35,7 @@ namespace RK
 
         private void вывестиБДToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox2.Visible = true;
+            FormDataBase.ShowDialog();
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,30 +59,18 @@ namespace RK
         {
             groupBox1.Visible = true;
             
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /* Gaz Gaz1 = new Gaz();
-             Gaz1.PowerBoiler = Convert.ToDouble(tbQ.Text);
-             Gaz1.FlowFuel = Convert.ToDouble(tbPrk.Text);
-             Gaz1.FlowWater = Convert.ToDouble(tbGwater.Text);
-             Gaz1.TempFuel = Convert.ToDouble(tbPb.Text);
-             Gaz1.TempAir = Convert.ToInt16(tbPair.Text);
-
-             Gaz1.CostCH4 = Convert.ToDouble(tbCH4.Text);
-             Gaz1.CostCO = Convert.ToDouble(tbCO.Text);
-             Gaz1.CostCO2 = Convert.ToDouble(tbCO2.Text);
-             Gaz1.CostNO2 = Convert.ToDouble(tbNO2.Text);
-             Gaz1.TempSmokeGaz = Convert.ToDouble(tbYgaz.Text);
-
-             label12.Text = Convert.ToString(Gaz1.RO2max);*/
-            //fuel1(222, "dsaygdsya");
+            
             btnRetry.Visible = true;
             btnReport.Visible = true;
             groupBox1.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
+            dataResult.Visible = true;
             
         }
 
@@ -142,7 +131,19 @@ namespace RK
 
         private void Form_RK_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "rezhimKardDB._boiler_gabarit_water_gaz_zhidkoe". При необходимости она может быть перемещена или удалена.
+            this.boiler_gabarit_water_gaz_zhidkoeTableAdapter.Fill(this.rezhimKardDB._boiler_gabarit_water_gaz_zhidkoe);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "rezhimKardDB.boiler_gabarit_steam". При необходимости она может быть перемещена или удалена.
+            this.boiler_gabarit_steamTableAdapter.Fill(this.rezhimKardDB.boiler_gabarit_steam);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "rezhimKardDB.boiler". При необходимости она может быть перемещена или удалена.
+            this.boilerTableAdapter.Fill(this.rezhimKardDB.boiler);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "rezhimKardDB.char_zhidkoe". При необходимости она может быть перемещена или удалена.
+            this.char_zhidkoeTableAdapter.Fill(this.rezhimKardDB.char_zhidkoe);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "rezhimKardDB.fuel". При необходимости она может быть перемещена или удалена.
+            this.fuelTableAdapter.Fill(this.rezhimKardDB.fuel);
 
         }
+
+
     }
 }

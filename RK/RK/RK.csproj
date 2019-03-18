@@ -104,8 +104,22 @@
     <Compile Include="Fuel.cs" />
     <Compile Include="InputTableData.cs" />
     <Compile Include="linterp.cs" />
+    <Compile Include="FormDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataBase.Designer.cs">
+      <DependentUpon>FormDataBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RezhimKardDB.cs">
+      <DependentUpon>RezhimKardDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RezhimKardDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RezhimKardDB.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAboutBD.resx">
       <DependentUpon>FormAboutBD.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +132,9 @@
     <EmbeddedResource Include="Form_RK.resx">
       <DependentUpon>Form_RK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDataBase.resx">
+      <DependentUpon>FormDataBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -126,6 +143,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -137,6 +155,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RezhimKardDB.xsc">
+      <DependentUpon>RezhimKardDB.xsd</DependentUpon>
+    </None>
+    <None Include="RezhimKardDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RezhimKardDB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RezhimKardDB.xss">
+      <DependentUpon>RezhimKardDB.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -152,6 +181,19 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+    <None Include="Resources\logo3.png" />
+    <None Include="Resources\ащт2.jpg" />
+    <None Include="Resources\fon1.jpg" />
+    <None Include="Resources\fon2.jpg" />
+    <None Include="Resources\fon3.jpg" />
+    <None Include="Resources\logo1.jpg" />
+    <None Include="Resources\Nuclear_Recruitment.jpg" />
+    <Content Include="RezhimKardDB.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
