@@ -43,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbTf = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataResult = new System.Windows.Forms.DataGridView();
             this.tbF = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cmbtipBoiler = new System.Windows.Forms.ComboBox();
@@ -56,6 +55,7 @@
             this.boilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbFuel = new System.Windows.Forms.ComboBox();
             this.fuelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataResult = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnRas = new System.Windows.Forms.Button();
@@ -101,13 +101,15 @@
             this.boiler_gabarit_steamTableAdapter = new RK.RezhimKardDBTableAdapters.boiler_gabarit_steamTableAdapter();
             this.boilergabaritsteamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter = new RK.RezhimKardDBTableAdapters.boiler_gabarit_water_gaz_zhidkoeTableAdapter();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilergabaritwatergazzhidkoeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fuelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataResult)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.charzhidkoeBindingSource)).BeginInit();
@@ -197,7 +199,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label24);
             this.groupBox1.Controls.Add(this.tbTf);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tbF);
@@ -229,7 +233,7 @@
             // 
             this.tbTf.Location = new System.Drawing.Point(91, 170);
             this.tbTf.Name = "tbTf";
-            this.tbTf.Size = new System.Drawing.Size(121, 20);
+            this.tbTf.Size = new System.Drawing.Size(78, 20);
             this.tbTf.TabIndex = 18;
             // 
             // label4
@@ -241,20 +245,11 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Площадь ПНК";
             // 
-            // dataResult
-            // 
-            this.dataResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataResult.Location = new System.Drawing.Point(716, 212);
-            this.dataResult.Name = "dataResult";
-            this.dataResult.Size = new System.Drawing.Size(164, 143);
-            this.dataResult.TabIndex = 17;
-            this.dataResult.Visible = false;
-            // 
             // tbF
             // 
             this.tbF.Location = new System.Drawing.Point(91, 135);
             this.tbF.Name = "tbF";
-            this.tbF.Size = new System.Drawing.Size(121, 20);
+            this.tbF.Size = new System.Drawing.Size(78, 20);
             this.tbF.TabIndex = 17;
             // 
             // label12
@@ -343,6 +338,15 @@
             // 
             this.fuelBindingSource.DataMember = "fuel";
             this.fuelBindingSource.DataSource = this.rezhimKardDB;
+            // 
+            // dataResult
+            // 
+            this.dataResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataResult.Location = new System.Drawing.Point(716, 212);
+            this.dataResult.Name = "dataResult";
+            this.dataResult.Size = new System.Drawing.Size(164, 143);
+            this.dataResult.TabIndex = 17;
+            this.dataResult.Visible = false;
             // 
             // label1
             // 
@@ -727,6 +731,24 @@
             // 
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter.ClearBeforeFill = true;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(171, 138);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(21, 13);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "м2";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(171, 173);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(18, 13);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "*С";
+            // 
             // Form_RK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -752,11 +774,11 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilergabaritwatergazzhidkoeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fuelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataResult)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -843,6 +865,8 @@
         private System.Windows.Forms.TextBox tbTf;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbF;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
     }
 }
 

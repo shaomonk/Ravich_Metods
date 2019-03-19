@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.rezhimKardDB = new RK.RezhimKardDB();
             this.cmbDB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDB = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.rezhimKardDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -56,7 +59,7 @@
             // 
             // cmbDB
             // 
-            this.cmbDB.DataSource = this.rezhimKardDB;
+            this.cmbDB.DataSource = this.rezhimKardDBBindingSource;
             this.cmbDB.FormattingEnabled = true;
             this.cmbDB.Location = new System.Drawing.Point(138, 17);
             this.cmbDB.Name = "cmbDB";
@@ -92,6 +95,11 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // rezhimKardDBBindingSource
+            // 
+            this.rezhimKardDBBindingSource.DataSource = this.rezhimKardDB;
+            this.rezhimKardDBBindingSource.Position = 0;
+            // 
             // FormDataBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,6 +114,7 @@
             this.Text = "FormDataBase";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,5 +128,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDB;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.BindingSource rezhimKardDBBindingSource;
     }
 }

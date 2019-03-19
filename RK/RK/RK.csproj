@@ -110,6 +110,7 @@
     <Compile Include="FormDataBase.Designer.cs">
       <DependentUpon>FormDataBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="pereprava.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RezhimKardDB.cs">

@@ -20,19 +20,21 @@ namespace RK
         FormAboutProg FormAboutProg = new FormAboutProg(); // new form aboutProg
         FormDataBase FormDataBase = new FormDataBase(); // new form FormDataBase
 
+        // class calculation
+        FirstCalculation calc = new FirstCalculation();
+        // class interpolation
+        linterp lint = new linterp();
+
         public Form_RK()
         {
             InitializeComponent();
-            
-
         }
 
         void ShowChildForm(Form_RK form)
         {
             form.MdiParent = this;
             form.Show();
-        }
-
+        }     
         private void вывестиБДToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormDataBase.ShowDialog();
@@ -43,37 +45,96 @@ namespace RK
             Close();
         }
 
+        //обработчик клика кнопки далее
         private void button4_Click(object sender, EventArgs e)
         {
-            groupBox3.Visible = true;
-            groupBox4.Visible = true;
-            btnRas.Visible = true;
+            if (tbF.Text == "")
+            {
+                MessageBox.Show("Укажите площадь ПНК", "Ошибка");
+                
+            }
+            if (tbTf.Text == "")
+            {
+                MessageBox.Show("Укажите температуру ПНК", "Ошибка");
+            }
+            else
+            {
+                groupBox3.Visible = true;
+                groupBox4.Visible = true;
+                btnRas.Visible = true;
+            }
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        //обработчик для кнопки "расчет" в меню
         private void рассчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
-            
-            
+ 
         }
-
+            //обработчик клика на кнопку расчет
         private void btnRas_Click(object sender, EventArgs e)
         {
-            
-            btnRetry.Visible = true;
-            btnReport.Visible = true;
-            groupBox1.Visible = false;
-            groupBox3.Visible = false;
-            groupBox4.Visible = false;
-            dataResult.Visible = true;
+            if (tbF.Text == "")
+            {
+                MessageBox.Show("Укажите площадь ПНК", "Ошибка");
+            }
+            if (tbTf.Text == "")
+            {
+                MessageBox.Show("Укажите температуру ПНК", "Ошибка");
+            }
+            if (tbQn.Text == "")
+            {
+                MessageBox.Show("Укажите низшую теплоту сгорания", "Ошибка");
+            }
+            if (tbFuel.Text == "")
+            {
+                MessageBox.Show("Укажите расход топлива", "Ошибка");
+            }
+            if (tbPb.Text == "")
+            {
+                MessageBox.Show("Укажите температуру топлива", "Ошибка");
+            }
+            if (tbPair.Text == "")
+            {
+                MessageBox.Show("Укажите температуру воздуха", "Ошибка");
+            }
+            if (tbGwater.Text == "")
+            {
+                MessageBox.Show("Укажите расход воды", "Ошибка");
+            }
+            if (tbCO2.Text == "")
+            {
+                MessageBox.Show("Укажите содержание СО2", "Ошибка");
+            }
+             if (tbCO.Text == "")
+            {
+                MessageBox.Show("Укажите содержание СО", "Ошибка");
+            }
+             if (tbNO2.Text == "")
+            {
+                MessageBox.Show("Укажите содержание NO2", "Ошибка");
+            }
+             if (tbCH4.Text == "")
+            {
+                MessageBox.Show("Укажите содержание CH4", "Ошибка");
+            }
+            if (tbYgaz.Text == "")
+            {
+                MessageBox.Show("Укажите температуру уходящих газов", "Ошибка");
+            }
+            else
+            {
+
+
+                btnRetry.Visible = true;
+                btnReport.Visible = true;
+                groupBox1.Visible = false;
+                groupBox3.Visible = false;
+                groupBox4.Visible = false;
+                dataResult.Visible = true;
+            }
             
         }
-
         private void btnRetry_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
@@ -92,11 +153,8 @@ namespace RK
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-         // call form Spravka
-            
+         // call form Spravka          
             FormSpravka.ShowDialog();
-            
-
         }
 
         private void программаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,11 +176,7 @@ namespace RK
             var worksheet = workBook.Worksheets.Add("hellow_file"); // new worlshhet
             
             workBook.SaveAs("c:\\helow.xlsx"); // save file
-            
-
-
-
-
+     
         }
 
         private void tbQ_TextChanged(object sender, EventArgs e)
@@ -142,9 +196,16 @@ namespace RK
             this.char_zhidkoeTableAdapter.Fill(this.rezhimKardDB.char_zhidkoe);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "rezhimKardDB.fuel". При необходимости она может быть перемещена или удалена.
             this.fuelTableAdapter.Fill(this.rezhimKardDB.fuel);
-
         }
-
-
+        //проверка текстбоксов на заполнение числами и только одной точкой
+        private void text_press(object sender, KeyPressEventArgs e)
+        {
+            TextBox TBox = (TextBox)sender;
+            if (!(Char.IsDigit(e.KeyChar)) && !((e.KeyChar == '.') && (TBox.Text.IndexOf(".") == -1) && (TBox.Text.Length != 0)))
+                if (e.KeyChar != (char)Keys.Back)
+                {
+                    e.Handled = true;
+                }
+        }
     }
 }

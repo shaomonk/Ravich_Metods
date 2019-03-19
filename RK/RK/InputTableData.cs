@@ -8,10 +8,7 @@ namespace RK
 {
     class InputTableData
     {
-        public string Boiler;
-        public string tipBoiler;
-        public string Fuel;
-        public string tipFuel;
+        public string Calculation;
         public double Gv;
         public double Tv;
         public double Tyx;
@@ -24,12 +21,14 @@ namespace RK
         public double Qsn;
         public double Qk;
 
-        public InputTableData(string _Fuel, string _tipBoiler, string _Boiler, string _tipFuel, double _Gv, double _Tv, double _Tyx, double _B, double _CO2, double _CO, double _CH4, double _NO2, double _Tr, double _Qsn, double _Qk)
+        public double F;
+        public double Tf;
+
+        public InputTableData(string _Calculation, double _F, double _Tf, double _Gv, double _Tv, double _Tyx, double _B, double _CO2, double _CO, double _CH4, double _NO2, double _Tr, double _Qsn, double _Qk)
         {
-            Fuel = _Fuel;
-            tipBoiler = _tipBoiler;
-            Boiler = _Boiler;
-            tipFuel = _tipFuel;
+            Calculation = _Calculation;
+            F = _F;
+            Tf = _Tf;
             Gv = _Gv;
             Tv = _Tv;
             B = _B;
