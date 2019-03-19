@@ -45,7 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbF = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cmbtipBoiler = new System.Windows.Forms.ComboBox();
             this.boilergabaritwatergazzhidkoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rezhimKardDB = new RK.RezhimKardDB();
             this.btnEnter = new System.Windows.Forms.Button();
@@ -103,6 +102,8 @@
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter = new RK.RezhimKardDBTableAdapters.boiler_gabarit_water_gaz_zhidkoeTableAdapter();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.tbPK = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boilergabaritwatergazzhidkoeBindingSource)).BeginInit();
@@ -199,6 +200,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label27);
+            this.groupBox1.Controls.Add(this.tbPK);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label24);
@@ -206,7 +209,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tbF);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.cmbtipBoiler);
             this.groupBox1.Controls.Add(this.btnEnter);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -257,19 +259,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 101);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 13);
+            this.label12.Size = new System.Drawing.Size(63, 26);
             this.label12.TabIndex = 7;
-            this.label12.Text = "Марка котла";
-            // 
-            // cmbtipBoiler
-            // 
-            this.cmbtipBoiler.DataSource = this.boilergabaritwatergazzhidkoeBindingSource;
-            this.cmbtipBoiler.DisplayMember = "tipBoiler";
-            this.cmbtipBoiler.FormattingEnabled = true;
-            this.cmbtipBoiler.Location = new System.Drawing.Point(91, 98);
-            this.cmbtipBoiler.Name = "cmbtipBoiler";
-            this.cmbtipBoiler.Size = new System.Drawing.Size(121, 21);
-            this.cmbtipBoiler.TabIndex = 17;
+            this.label12.Text = "Мощность \r\nкотла";
             // 
             // boilergabaritwatergazzhidkoeBindingSource
             // 
@@ -749,6 +741,22 @@
             this.label25.TabIndex = 8;
             this.label25.Text = "*С";
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(175, 103);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(28, 13);
+            this.label27.TabIndex = 7;
+            this.label27.Text = "МВт";
+            // 
+            // tbPK
+            // 
+            this.tbPK.Location = new System.Drawing.Point(92, 98);
+            this.tbPK.Name = "tbPK";
+            this.tbPK.Size = new System.Drawing.Size(77, 20);
+            this.tbPK.TabIndex = 8;
+            // 
             // Form_RK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -844,7 +852,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cmbtipBoiler;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox tbQsn;
         private System.Windows.Forms.Label label22;
@@ -867,6 +874,8 @@
         private System.Windows.Forms.TextBox tbF;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox tbPK;
     }
 }
 

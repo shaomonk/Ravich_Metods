@@ -61,6 +61,7 @@ namespace RK
         //содержание RO2max
         public double  CostMax(double CO2)
         {
+             
             return RO2max = (CO2 * 100) / (100 - 4.76);
         }
 

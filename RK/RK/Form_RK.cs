@@ -57,6 +57,10 @@ namespace RK
             {
                 MessageBox.Show("Укажите температуру ПНК", "Ошибка");
             }
+            if (tbPK.Text == "")
+            {
+                MessageBox.Show("Укажите мощность котла", "Ошибка");
+            }
             else
             {
                 groupBox3.Visible = true;
@@ -74,6 +78,11 @@ namespace RK
             //обработчик клика на кнопку расчет
         private void btnRas_Click(object sender, EventArgs e)
         {
+            
+            if (tbPK.Text == "")
+            {
+                MessageBox.Show("Укажите мощность котла", "Ошибка");
+            }
             if (tbF.Text == "")
             {
                 MessageBox.Show("Укажите площадь ПНК", "Ошибка");
@@ -106,15 +115,15 @@ namespace RK
             {
                 MessageBox.Show("Укажите содержание СО2", "Ошибка");
             }
-             if (tbCO.Text == "")
+            if (tbCO.Text == "")
             {
                 MessageBox.Show("Укажите содержание СО", "Ошибка");
             }
-             if (tbNO2.Text == "")
+            if (tbNO2.Text == "")
             {
                 MessageBox.Show("Укажите содержание NO2", "Ошибка");
             }
-             if (tbCH4.Text == "")
+            if (tbCH4.Text == "")
             {
                 MessageBox.Show("Укажите содержание CH4", "Ошибка");
             }
@@ -125,7 +134,6 @@ namespace RK
             else
             {
 
-
                 btnRetry.Visible = true;
                 btnReport.Visible = true;
                 groupBox1.Visible = false;
@@ -135,6 +143,7 @@ namespace RK
             }
             
         }
+
         private void btnRetry_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
@@ -207,5 +216,9 @@ namespace RK
                     e.Handled = true;
                 }
         }
+
+
+           
     }
+    
 }
