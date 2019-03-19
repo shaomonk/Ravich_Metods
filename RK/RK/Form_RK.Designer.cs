@@ -40,7 +40,11 @@
             this.поискПоБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.контактыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbTf = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dataResult = new System.Windows.Forms.DataGridView();
+            this.tbF = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cmbtipBoiler = new System.Windows.Forms.ComboBox();
             this.boilergabaritwatergazzhidkoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -97,10 +101,6 @@
             this.boiler_gabarit_steamTableAdapter = new RK.RezhimKardDBTableAdapters.boiler_gabarit_steamTableAdapter();
             this.boilergabaritsteamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter = new RK.RezhimKardDBTableAdapters.boiler_gabarit_water_gaz_zhidkoeTableAdapter();
-            this.tbF = new System.Windows.Forms.TextBox();
-            this.tbTf = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataResult)).BeginInit();
@@ -200,7 +200,6 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.tbTf);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.dataResult);
             this.groupBox1.Controls.Add(this.tbF);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.cmbtipBoiler);
@@ -217,14 +216,46 @@
             this.groupBox1.Text = "Данные";
             this.groupBox1.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 173);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 26);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Температура \r\nПНК";
+            // 
+            // tbTf
+            // 
+            this.tbTf.Location = new System.Drawing.Point(91, 170);
+            this.tbTf.Name = "tbTf";
+            this.tbTf.Size = new System.Drawing.Size(121, 20);
+            this.tbTf.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Площадь ПНК";
+            // 
             // dataResult
             // 
             this.dataResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataResult.Location = new System.Drawing.Point(218, 0);
+            this.dataResult.Location = new System.Drawing.Point(716, 212);
             this.dataResult.Name = "dataResult";
-            this.dataResult.Size = new System.Drawing.Size(474, 255);
+            this.dataResult.Size = new System.Drawing.Size(164, 143);
             this.dataResult.TabIndex = 17;
             this.dataResult.Visible = false;
+            // 
+            // tbF
+            // 
+            this.tbF.Location = new System.Drawing.Point(91, 135);
+            this.tbF.Name = "tbF";
+            this.tbF.Size = new System.Drawing.Size(121, 20);
+            this.tbF.TabIndex = 17;
             // 
             // label12
             // 
@@ -696,38 +727,6 @@
             // 
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter.ClearBeforeFill = true;
             // 
-            // tbF
-            // 
-            this.tbF.Location = new System.Drawing.Point(91, 135);
-            this.tbF.Name = "tbF";
-            this.tbF.Size = new System.Drawing.Size(121, 20);
-            this.tbF.TabIndex = 17;
-            // 
-            // tbTf
-            // 
-            this.tbTf.Location = new System.Drawing.Point(91, 170);
-            this.tbTf.Name = "tbTf";
-            this.tbTf.Size = new System.Drawing.Size(121, 20);
-            this.tbTf.TabIndex = 18;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Площадь ПНК";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 26);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Температура \r\nПНК";
-            // 
             // Form_RK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -737,6 +736,7 @@
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnRetry);
             this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.dataResult);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.btnRas);
