@@ -8,7 +8,7 @@ namespace RK
 {
     class InputTableData
     {
-        public string Calculation;
+        public double Calculation;
         public double Gv;
         public double Tv;
         public double Tyx;
@@ -24,7 +24,7 @@ namespace RK
         public double F;
         public double Tf;
 
-        public InputTableData(string _Calculation, double _F, double _Tf, double _Gv, double _Tv, double _Tyx, double _B, double _CO2, double _CO, double _CH4, double _NO2, double _Tr, double _Qsn, double _Qk)
+        public InputTableData(double _Calculation, double _F, double _Tf, double _Gv, double _Tv, double _Tyx, double _B, double _CO2, double _CO, double _CH4, double _NO2, double _Tr, double _Qsn, double _Qk)
         {
             Calculation = _Calculation;
             F = _F;

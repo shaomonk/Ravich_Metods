@@ -40,21 +40,37 @@
             this.поискПоБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.контактыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.tbPK = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.tbTf = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbF = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.boilergabaritwatergazzhidkoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rezhimKardDB = new RK.RezhimKardDB();
             this.btnEnter = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbBoiler = new System.Windows.Forms.ComboBox();
             this.boilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rezhimKardDB = new RK.RezhimKardDB();
             this.cmbFuel = new System.Windows.Forms.ComboBox();
             this.fuelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boilergabaritwatergazzhidkoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataResult = new System.Windows.Forms.DataGridView();
+            this.calculatiionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rO2maxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alphaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vsgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.q2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.q3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.q5DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kPDbr1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.byDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.byslDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnRas = new System.Windows.Forms.Button();
@@ -100,17 +116,14 @@
             this.boiler_gabarit_steamTableAdapter = new RK.RezhimKardDBTableAdapters.boiler_gabarit_steamTableAdapter();
             this.boilergabaritsteamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter = new RK.RezhimKardDBTableAdapters.boiler_gabarit_water_gaz_zhidkoeTableAdapter();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.tbPK = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.boilergabaritwatergazzhidkoeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fuelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boilergabaritwatergazzhidkoeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataResult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.charzhidkoeBindingSource)).BeginInit();
@@ -222,6 +235,32 @@
             this.groupBox1.Text = "Данные";
             this.groupBox1.Visible = false;
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(175, 103);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(28, 13);
+            this.label27.TabIndex = 7;
+            this.label27.Text = "МВт";
+            // 
+            // tbPK
+            // 
+            this.tbPK.Location = new System.Drawing.Point(92, 98);
+            this.tbPK.Name = "tbPK";
+            this.tbPK.Size = new System.Drawing.Size(77, 20);
+            this.tbPK.TabIndex = 8;
+            this.tbPK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(171, 173);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(18, 13);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "*С";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -231,12 +270,22 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Температура \r\nПНК";
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(171, 138);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(21, 13);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "м2";
+            // 
             // tbTf
             // 
             this.tbTf.Location = new System.Drawing.Point(91, 170);
             this.tbTf.Name = "tbTf";
             this.tbTf.Size = new System.Drawing.Size(78, 20);
             this.tbTf.TabIndex = 18;
+            this.tbTf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // label4
             // 
@@ -253,6 +302,7 @@
             this.tbF.Name = "tbF";
             this.tbF.Size = new System.Drawing.Size(78, 20);
             this.tbF.TabIndex = 17;
+            this.tbF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // label12
             // 
@@ -262,16 +312,6 @@
             this.label12.Size = new System.Drawing.Size(63, 26);
             this.label12.TabIndex = 7;
             this.label12.Text = "Мощность \r\nкотла";
-            // 
-            // boilergabaritwatergazzhidkoeBindingSource
-            // 
-            this.boilergabaritwatergazzhidkoeBindingSource.DataMember = "boiler_gabarit_water_gaz/zhidkoe";
-            this.boilergabaritwatergazzhidkoeBindingSource.DataSource = this.rezhimKardDB;
-            // 
-            // rezhimKardDB
-            // 
-            this.rezhimKardDB.DataSetName = "RezhimKardDB";
-            this.rezhimKardDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnEnter
             // 
@@ -316,6 +356,11 @@
             this.boilerBindingSource.DataMember = "boiler";
             this.boilerBindingSource.DataSource = this.rezhimKardDB;
             // 
+            // rezhimKardDB
+            // 
+            this.rezhimKardDB.DataSetName = "RezhimKardDB";
+            this.rezhimKardDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cmbFuel
             // 
             this.cmbFuel.DataSource = this.fuelBindingSource;
@@ -331,14 +376,118 @@
             this.fuelBindingSource.DataMember = "fuel";
             this.fuelBindingSource.DataSource = this.rezhimKardDB;
             // 
+            // boilergabaritwatergazzhidkoeBindingSource
+            // 
+            this.boilergabaritwatergazzhidkoeBindingSource.DataMember = "boiler_gabarit_water_gaz/zhidkoe";
+            this.boilergabaritwatergazzhidkoeBindingSource.DataSource = this.rezhimKardDB;
+            // 
             // dataResult
             // 
+            this.dataResult.AllowUserToDeleteRows = false;
+            this.dataResult.AllowUserToOrderColumns = true;
+            this.dataResult.AutoGenerateColumns = false;
             this.dataResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataResult.Location = new System.Drawing.Point(716, 212);
+            this.dataResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.calculatiionDataGridViewTextBoxColumn,
+            this.rO2maxDataGridViewTextBoxColumn,
+            this.khDataGridViewTextBoxColumn,
+            this.alphaDataGridViewTextBoxColumn,
+            this.vsgDataGridViewTextBoxColumn,
+            this.q2DataGridViewTextBoxColumn,
+            this.q3DataGridViewTextBoxColumn,
+            this.q5DataGridViewTextBoxColumn,
+            this.kPDbr1DataGridViewTextBoxColumn,
+            this.byDataGridViewTextBoxColumn,
+            this.byslDataGridViewTextBoxColumn});
+            this.dataResult.DataSource = this.resultBindingSource;
+            this.dataResult.Location = new System.Drawing.Point(716, 209);
             this.dataResult.Name = "dataResult";
-            this.dataResult.Size = new System.Drawing.Size(164, 143);
+            this.dataResult.ReadOnly = true;
+            this.dataResult.Size = new System.Drawing.Size(703, 285);
             this.dataResult.TabIndex = 17;
             this.dataResult.Visible = false;
+            // 
+            // calculatiionDataGridViewTextBoxColumn
+            // 
+            this.calculatiionDataGridViewTextBoxColumn.DataPropertyName = "Calculatiion";
+            this.calculatiionDataGridViewTextBoxColumn.HeaderText = "Calculatiion";
+            this.calculatiionDataGridViewTextBoxColumn.Name = "calculatiionDataGridViewTextBoxColumn";
+            this.calculatiionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rO2maxDataGridViewTextBoxColumn
+            // 
+            this.rO2maxDataGridViewTextBoxColumn.DataPropertyName = "RO2max";
+            this.rO2maxDataGridViewTextBoxColumn.HeaderText = "RO2max";
+            this.rO2maxDataGridViewTextBoxColumn.Name = "rO2maxDataGridViewTextBoxColumn";
+            this.rO2maxDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // khDataGridViewTextBoxColumn
+            // 
+            this.khDataGridViewTextBoxColumn.DataPropertyName = "Kh";
+            this.khDataGridViewTextBoxColumn.HeaderText = "Kh";
+            this.khDataGridViewTextBoxColumn.Name = "khDataGridViewTextBoxColumn";
+            this.khDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // alphaDataGridViewTextBoxColumn
+            // 
+            this.alphaDataGridViewTextBoxColumn.DataPropertyName = "alpha";
+            this.alphaDataGridViewTextBoxColumn.HeaderText = "alpha";
+            this.alphaDataGridViewTextBoxColumn.Name = "alphaDataGridViewTextBoxColumn";
+            this.alphaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vsgDataGridViewTextBoxColumn
+            // 
+            this.vsgDataGridViewTextBoxColumn.DataPropertyName = "Vsg";
+            this.vsgDataGridViewTextBoxColumn.HeaderText = "Vsg";
+            this.vsgDataGridViewTextBoxColumn.Name = "vsgDataGridViewTextBoxColumn";
+            this.vsgDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // q2DataGridViewTextBoxColumn
+            // 
+            this.q2DataGridViewTextBoxColumn.DataPropertyName = "Q2";
+            this.q2DataGridViewTextBoxColumn.HeaderText = "Q2";
+            this.q2DataGridViewTextBoxColumn.Name = "q2DataGridViewTextBoxColumn";
+            this.q2DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // q3DataGridViewTextBoxColumn
+            // 
+            this.q3DataGridViewTextBoxColumn.DataPropertyName = "Q3";
+            this.q3DataGridViewTextBoxColumn.HeaderText = "Q3";
+            this.q3DataGridViewTextBoxColumn.Name = "q3DataGridViewTextBoxColumn";
+            this.q3DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // q5DataGridViewTextBoxColumn
+            // 
+            this.q5DataGridViewTextBoxColumn.DataPropertyName = "Q5";
+            this.q5DataGridViewTextBoxColumn.HeaderText = "Q5";
+            this.q5DataGridViewTextBoxColumn.Name = "q5DataGridViewTextBoxColumn";
+            this.q5DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kPDbr1DataGridViewTextBoxColumn
+            // 
+            this.kPDbr1DataGridViewTextBoxColumn.DataPropertyName = "KPDbr1";
+            this.kPDbr1DataGridViewTextBoxColumn.HeaderText = "KPDbr1";
+            this.kPDbr1DataGridViewTextBoxColumn.Name = "kPDbr1DataGridViewTextBoxColumn";
+            this.kPDbr1DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // byDataGridViewTextBoxColumn
+            // 
+            this.byDataGridViewTextBoxColumn.DataPropertyName = "By";
+            this.byDataGridViewTextBoxColumn.HeaderText = "By";
+            this.byDataGridViewTextBoxColumn.Name = "byDataGridViewTextBoxColumn";
+            this.byDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // byslDataGridViewTextBoxColumn
+            // 
+            this.byslDataGridViewTextBoxColumn.DataPropertyName = "Bysl";
+            this.byslDataGridViewTextBoxColumn.HeaderText = "Bysl";
+            this.byslDataGridViewTextBoxColumn.Name = "byslDataGridViewTextBoxColumn";
+            this.byslDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // resultBindingSource
+            // 
+            this.resultBindingSource.DataMember = "Result";
+            this.resultBindingSource.DataSource = this.rezhimKardDB;
             // 
             // label1
             // 
@@ -414,6 +563,7 @@
             this.tbQsn.Name = "tbQsn";
             this.tbQsn.Size = new System.Drawing.Size(57, 20);
             this.tbQsn.TabIndex = 8;
+            this.tbQsn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // label20
             // 
@@ -502,6 +652,7 @@
             this.tbGwater.Name = "tbGwater";
             this.tbGwater.Size = new System.Drawing.Size(57, 20);
             this.tbGwater.TabIndex = 2;
+            this.tbGwater.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // label6
             // 
@@ -518,6 +669,7 @@
             this.tbPair.Name = "tbPair";
             this.tbPair.Size = new System.Drawing.Size(57, 20);
             this.tbPair.TabIndex = 2;
+            this.tbPair.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // tbPb
             // 
@@ -525,6 +677,7 @@
             this.tbPb.Name = "tbPb";
             this.tbPb.Size = new System.Drawing.Size(57, 20);
             this.tbPb.TabIndex = 2;
+            this.tbPb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // tbFuel
             // 
@@ -532,6 +685,7 @@
             this.tbFuel.Name = "tbFuel";
             this.tbFuel.Size = new System.Drawing.Size(57, 20);
             this.tbFuel.TabIndex = 1;
+            this.tbFuel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // label10
             // 
@@ -549,6 +703,7 @@
             this.tbQn.Size = new System.Drawing.Size(57, 20);
             this.tbQn.TabIndex = 0;
             this.tbQn.TextChanged += new System.EventHandler(this.tbQ_TextChanged);
+            this.tbQn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // tbCO2
             // 
@@ -556,6 +711,7 @@
             this.tbCO2.Name = "tbCO2";
             this.tbCO2.Size = new System.Drawing.Size(80, 20);
             this.tbCO2.TabIndex = 2;
+            this.tbCO2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // label11
             // 
@@ -635,6 +791,7 @@
             this.tbNO2.Name = "tbNO2";
             this.tbNO2.Size = new System.Drawing.Size(80, 20);
             this.tbNO2.TabIndex = 2;
+            this.tbNO2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // tbCH4
             // 
@@ -642,6 +799,7 @@
             this.tbCH4.Name = "tbCH4";
             this.tbCH4.Size = new System.Drawing.Size(80, 20);
             this.tbCH4.TabIndex = 2;
+            this.tbCH4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // tbCO
             // 
@@ -649,6 +807,7 @@
             this.tbCO.Name = "tbCO";
             this.tbCO.Size = new System.Drawing.Size(80, 20);
             this.tbCO.TabIndex = 2;
+            this.tbCO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // tbYgaz
             // 
@@ -723,40 +882,6 @@
             // 
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter.ClearBeforeFill = true;
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(171, 138);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(21, 13);
-            this.label24.TabIndex = 7;
-            this.label24.Text = "м2";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(171, 173);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(18, 13);
-            this.label25.TabIndex = 8;
-            this.label25.Text = "*С";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(175, 103);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(28, 13);
-            this.label27.TabIndex = 7;
-            this.label27.Text = "МВт";
-            // 
-            // tbPK
-            // 
-            this.tbPK.Location = new System.Drawing.Point(92, 98);
-            this.tbPK.Name = "tbPK";
-            this.tbPK.Size = new System.Drawing.Size(77, 20);
-            this.tbPK.TabIndex = 8;
-            // 
             // Form_RK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -782,11 +907,12 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.boilergabaritwatergazzhidkoeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rezhimKardDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fuelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boilergabaritwatergazzhidkoeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataResult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -876,6 +1002,18 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox tbPK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calculatiionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rO2maxDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alphaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vsgDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn q2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn q3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn q5DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kPDbr1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn byDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn byslDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource resultBindingSource;
     }
 }
 

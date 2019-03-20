@@ -13,17 +13,20 @@ namespace RK
         // Флаг админа
         static public bool check = false;
         //Переменые вывода данных
-        static public string Calculation;// номер расчета
-        static public double RO2max;// макс содержание трехатомных газов
-        static public double Kh;// поправочный коэф
-        static public double allpha;//коэф избытка воздуха
-        static public double Vsg;//объем ПС
-        static public double Q2, Q3, Q5; //кушки , потери тепла
-        static public double[,] heatLossMass; // масив потерь
-        static public double KPDbr1;// КПД брутто котла
-        static public double By;//расход топлива удельный
-        static public double KPDkotla;//кпд котлоагрегата
-        static public double Bysl;//расход условного топлива
+        static public double Calculation;// номер расчета(испытания)
+        static public double Qk;// мощность котла
+        static public double Qn;// низшая теплота сгорания
+        static public double B;// расход топлива
+        static public double Tr;//температура топлива
+        static public double Tf;//температура поверхности нагрева котла
+        static public double F;//площадь поверхности нагрева котла
+        static public double CO2, CO, CH4, NO2; //компоненты продуктов сгорания
+        
+        static public double Gv;// расход воды через котел
+        static public double Tv;//температура воздуха
+
+        static public double Tyx;//температура уходящих газов
+        static public double Qsn;//расход на собственные нужды
 
 
     }
