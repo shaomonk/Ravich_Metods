@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -89,12 +104,22 @@
     <Compile Include="Fuel.cs" />
     <Compile Include="InputTableData.cs" />
     <Compile Include="linterp.cs" />
+    <Compile Include="FormDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataBase.Designer.cs">
+      <DependentUpon>FormDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pereprava.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RezhimKardDBDataSet.Designer.cs">
+    <Compile Include="RezhimKardDB.cs">
+      <DependentUpon>RezhimKardDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RezhimKardDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RezhimKardDBDataSet.xsd</DependentUpon>
+      <DependentUpon>RezhimKardDB.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormAboutBD.resx">
       <DependentUpon>FormAboutBD.cs</DependentUpon>
@@ -108,6 +133,9 @@
     <EmbeddedResource Include="Form_RK.resx">
       <DependentUpon>Form_RK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDataBase.resx">
+      <DependentUpon>FormDataBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -116,6 +144,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -127,20 +156,45 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="RezhimKardDBDataSet.xsc">
-      <DependentUpon>RezhimKardDBDataSet.xsd</DependentUpon>
+    <None Include="RezhimKardDB.xsc">
+      <DependentUpon>RezhimKardDB.xsd</DependentUpon>
     </None>
-    <None Include="RezhimKardDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RezhimKardDBDataSet.Designer.cs</LastGenOutput>
+    <None Include="RezhimKardDB.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RezhimKardDB.Designer.cs</LastGenOutput>
     </None>
-    <None Include="RezhimKardDBDataSet.xss">
-      <DependentUpon>RezhimKardDBDataSet.xsd</DependentUpon>
+    <None Include="RezhimKardDB.xss">
+      <DependentUpon>RezhimKardDB.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+    <None Include="Resources\logo3.png" />
+    <None Include="Resources\ащт2.jpg" />
+    <None Include="Resources\fon1.jpg" />
+    <None Include="Resources\fon2.jpg" />
+    <None Include="Resources\fon3.jpg" />
+    <None Include="Resources\logo1.jpg" />
+    <None Include="Resources\Nuclear_Recruitment.jpg" />
+    <Content Include="RezhimKardDB.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

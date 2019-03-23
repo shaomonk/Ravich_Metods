@@ -35,7 +35,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(141, 318);
+            this.btnOk.Location = new System.Drawing.Point(141, 278);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(176, 36);
             this.btnOk.TabIndex = 0;
@@ -56,7 +56,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 384);
+            this.BackgroundImage = global::RK.Properties.Resources.fon2;
+            this.ClientSize = new System.Drawing.Size(477, 332);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOk);
             this.Name = "FormSpravka";

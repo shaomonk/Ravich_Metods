@@ -35,9 +35,9 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(154, 277);
+            this.btnOk.Location = new System.Drawing.Point(141, 247);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(182, 33);
+            this.btnOk.Size = new System.Drawing.Size(185, 33);
             this.btnOk.TabIndex = 0;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -56,7 +56,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 333);
+            this.BackgroundImage = global::RK.Properties.Resources.fon1;
+            this.ClientSize = new System.Drawing.Size(472, 306);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOk);
             this.Name = "FormAboutProg";

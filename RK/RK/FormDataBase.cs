@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace RK
 {
-    public partial class FormAboutProg : Form
+    public partial class FormDataBase : Form
     {
-        public FormAboutProg()
+        public FormDataBase()
         {
             InitializeComponent();
         }
 
-        private void btnOk_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        
+        private void btnDB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
