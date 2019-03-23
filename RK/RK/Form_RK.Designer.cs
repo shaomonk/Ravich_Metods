@@ -815,6 +815,7 @@
             this.tbYgaz.Name = "tbYgaz";
             this.tbYgaz.Size = new System.Drawing.Size(57, 20);
             this.tbYgaz.TabIndex = 2;
+            this.tbYgaz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_press);
             // 
             // label14
             // 

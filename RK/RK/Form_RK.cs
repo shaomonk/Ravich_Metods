@@ -133,6 +133,24 @@ namespace RK
             }
             else
             {
+                calc.Qn = Convert.ToDouble(tbQn.Text);
+                calc.B = Convert.ToDouble(tbFuel.Text);
+                calc.CO2 = Convert.ToDouble(tbCO2.Text);
+                calc.CO = Convert.ToDouble(tbCO.Text);
+                calc.NO2 = Convert.ToDouble(tbNO2.Text);
+                calc.CH4 = Convert.ToDouble(tbCH4.Text);
+                calc.Tr = Convert.ToDouble(tbPb.Text);
+                calc.Tv = Convert.ToDouble(tbPair.Text);
+                calc.F = Convert.ToDouble(tbF.Text);
+                calc.Tf = Convert.ToDouble(tbTf.Text);
+                calc.Tyx = Convert.ToDouble(tbYgaz.Text);
+                calc.Gv = Convert.ToDouble(tbGwater.Text);
+                calc.Qsn = Convert.ToDouble(tbQsn.Text);
+
+                calc.Qk = Convert.ToDouble(tbPK.Text);
+
+                calc.Calc();
+                
 
                 btnRetry.Visible = true;
                 btnReport.Visible = true;
