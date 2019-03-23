@@ -49,23 +49,24 @@ namespace RK
         //обработчик клика кнопки далее
         private void button4_Click(object sender, EventArgs e)
         {
-            if (tbF.Text == "")
+            if (tbPK.Text == "") 
             {
-                MessageBox.Show("Укажите площадь ПНК", "Ошибка");
-                if (tbTf.Text == "")
+                MessageBox.Show("Укажите мощность котла", "Ошибка");
+                if (tbF.Text == "")
                 {
-                    MessageBox.Show("Укажите температуру ПНК", "Ошибка");
-                    if (tbPK.Text == "")
+                    MessageBox.Show("Укажите площадь ПНК", "Ошибка");
+                    if (tbTf.Text == "")
                     {
-                        MessageBox.Show("Укажите мощность котла", "Ошибка");
+                        MessageBox.Show("укажите температуру пнк", "ошибка");
                     }
-                    else
-                    {
-                         groupBox3.Visible = true;
-                         groupBox4.Visible = true;
-                         btnRas.Visible = true;
-                    }
+
                 }
+            }
+            else
+            {
+                groupBox3.Visible = true;
+                groupBox4.Visible = true;
+                btnRas.Visible = true;
             }
         }  
         //обработчик для кнопки "расчет" в меню
@@ -80,84 +81,86 @@ namespace RK
             if (tbPK.Text == "")
             {
                 MessageBox.Show("Укажите мощность котла", "Ошибка");
-            }
-            if (tbF.Text == "")
-            {
-                MessageBox.Show("Укажите площадь ПНК", "Ошибка");
-            }
-            if (tbTf.Text == "")
-            {
-                MessageBox.Show("Укажите температуру ПНК", "Ошибка");
-            }
-            if (tbQn.Text == "")
-            {
-                MessageBox.Show("Укажите низшую теплоту сгорания", "Ошибка");
-            }
-            if (tbFuel.Text == "")
-            {
-                MessageBox.Show("Укажите расход топлива", "Ошибка");
-            }
-            if (tbPb.Text == "")
-            {
-                MessageBox.Show("Укажите температуру топлива", "Ошибка");
-            }
-            if (tbPair.Text == "")
-            {
-                MessageBox.Show("Укажите температуру воздуха", "Ошибка");
-            }
-            if (tbGwater.Text == "")
-            {
-                MessageBox.Show("Укажите расход воды", "Ошибка");
-            }
-            if (tbCO2.Text == "")
-            {
-                MessageBox.Show("Укажите содержание СО2", "Ошибка");
-            }
-            if (tbCO.Text == "")
-            {
-                MessageBox.Show("Укажите содержание СО", "Ошибка");
-            }
-            if (tbNO2.Text == "")
-            {
-                MessageBox.Show("Укажите содержание NO2", "Ошибка");
-            }
-            if (tbCH4.Text == "")
-            {
-                MessageBox.Show("Укажите содержание CH4", "Ошибка");
-            }
-            if (tbYgaz.Text == "")
-            {
-                MessageBox.Show("Укажите температуру уходящих газов", "Ошибка");
-            }
-            else
-            {
-                calc.Qn = Convert.ToDouble(tbQn.Text);
-                calc.B = Convert.ToDouble(tbFuel.Text);
-                calc.CO2 = Convert.ToDouble(tbCO2.Text);
-                calc.CO = Convert.ToDouble(tbCO.Text);
-                calc.NO2 = Convert.ToDouble(tbNO2.Text);
-                calc.CH4 = Convert.ToDouble(tbCH4.Text);
-                calc.Tr = Convert.ToDouble(tbPb.Text);
-                calc.Tv = Convert.ToDouble(tbPair.Text);
-                calc.F = Convert.ToDouble(tbF.Text);
-                calc.Tf = Convert.ToDouble(tbTf.Text);
-                calc.Tyx = Convert.ToDouble(tbYgaz.Text);
-                calc.Gv = Convert.ToDouble(tbGwater.Text);
-                calc.Qsn = Convert.ToDouble(tbQsn.Text);
+                if (tbF.Text == "")
+                {
+                    MessageBox.Show("Укажите площадь ПНК", "Ошибка");
+                    if (tbTf.Text == "")
+                    {
+                        MessageBox.Show("Укажите температуру ПНК", "Ошибка");
+                        if (tbQn.Text == "")
+                        {
+                            MessageBox.Show("Укажите низшую теплоту сгорания", "Ошибка");
+                            if (tbFuel.Text == "")
+                            {
+                                MessageBox.Show("Укажите расход топлива", "Ошибка");
+                                if (tbPb.Text == "")
+                                {
+                                    MessageBox.Show("Укажите температуру топлива", "Ошибка");
+                                    if (tbPair.Text == "")
+                                    {
+                                        MessageBox.Show("Укажите температуру воздуха", "Ошибка");
+                                        if (tbGwater.Text == "")
+                                        {
+                                            MessageBox.Show("Укажите расход воды", "Ошибка");
+                                            if (tbCO2.Text == "")
+                                            {
+                                                MessageBox.Show("Укажите содержание СО2", "Ошибка");
+                                                if (tbCO.Text == "")
+                                                {
+                                                    MessageBox.Show("Укажите содержание СО", "Ошибка");
+                                                    if (tbNO2.Text == "")
+                                                    {
+                                                        MessageBox.Show("Укажите содержание NO2", "Ошибка");
+                                                        if (tbCH4.Text == "")
+                                                        {
+                                                            MessageBox.Show("Укажите содержание CH4", "Ошибка");
+                                                            if (tbYgaz.Text == "")
+                                                            {
+                                                                MessageBox.Show("Укажите температуру уходящих газов", "Ошибка");
+                                                            }
+                                                            else
+                                                            {
+                                                                calc.Qn = Convert.ToDouble(tbQn.Text);
+                                                                calc.B = Convert.ToDouble(tbFuel.Text);
+                                                                calc.CO2 = Convert.ToDouble(tbCO2.Text);
+                                                                calc.CO = Convert.ToDouble(tbCO.Text);
+                                                                calc.NO2 = Convert.ToDouble(tbNO2.Text);
+                                                                calc.CH4 = Convert.ToDouble(tbCH4.Text);
+                                                                calc.Tr = Convert.ToDouble(tbPb.Text);
+                                                                calc.Tv = Convert.ToDouble(tbPair.Text);
+                                                                calc.F = Convert.ToDouble(tbF.Text);
+                                                                calc.Tf = Convert.ToDouble(tbTf.Text);
+                                                                calc.Tyx = Convert.ToDouble(tbYgaz.Text);
+                                                                calc.Gv = Convert.ToDouble(tbGwater.Text);
+                                                                calc.Qsn = Convert.ToDouble(tbQsn.Text);
 
-                calc.Qk = Convert.ToDouble(tbPK.Text);
+                                                                calc.Qk = Convert.ToDouble(tbPK.Text);
 
-                calc.Calc();
+                                                                calc.Calc();
 
-                TableResult.Add(calc);
+                                                                TableResult.Add(calc);
 
-                btnRetry.Visible = true;
-                btnReport.Visible = true;
-                groupBox1.Visible = false;
-                groupBox3.Visible = false;
-                groupBox4.Visible = false;
-                dataResult.Visible = true;
-            }          
+                                                                btnRetry.Visible = true;
+                                                                btnReport.Visible = true;
+                                                                groupBox1.Visible = false;
+                                                                groupBox3.Visible = false;
+                                                                groupBox4.Visible = false;
+                                                                dataResult.Visible = true;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+ 
+            
         }
         private void btnRetry_Click(object sender, EventArgs e)
         {

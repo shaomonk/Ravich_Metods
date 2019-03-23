@@ -216,7 +216,6 @@
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Controls.Add(this.tbPK);
             this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.dataResult);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label24);
             this.groupBox1.Controls.Add(this.tbTf);
@@ -401,7 +400,7 @@
             this.byDataGridViewTextBoxColumn,
             this.byslDataGridViewTextBoxColumn});
             this.dataResult.DataSource = this.resultBindingSource;
-            this.dataResult.Location = new System.Drawing.Point(0, -5);
+            this.dataResult.Location = new System.Drawing.Point(716, 209);
             this.dataResult.Name = "dataResult";
             this.dataResult.ReadOnly = true;
             this.dataResult.Size = new System.Drawing.Size(703, 285);
@@ -893,6 +892,7 @@
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnRetry);
             this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.dataResult);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.btnRas);
