@@ -400,10 +400,10 @@
             this.byDataGridViewTextBoxColumn,
             this.byslDataGridViewTextBoxColumn});
             this.dataResult.DataSource = this.resultBindingSource;
-            this.dataResult.Location = new System.Drawing.Point(716, 209);
+            this.dataResult.Location = new System.Drawing.Point(716, 202);
             this.dataResult.Name = "dataResult";
             this.dataResult.ReadOnly = true;
-            this.dataResult.Size = new System.Drawing.Size(703, 285);
+            this.dataResult.Size = new System.Drawing.Size(682, 285);
             this.dataResult.TabIndex = 17;
             this.dataResult.Visible = false;
             // 

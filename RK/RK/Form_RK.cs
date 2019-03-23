@@ -45,30 +45,33 @@ namespace RK
         {
             Close();
         }
+        // видимоть первых
+        void visible1()
+        {
+            groupBox3.Visible = true;
+            groupBox4.Visible = true;
+            btnRas.Visible = true;
+        }
+        // НЕвидимоть первых
+        void novisible1()
+        {
+            groupBox3.Visible = false;
+            groupBox4.Visible = false;
+            btnRas.Visible = false;
+        }
 
         //обработчик клика кнопки далее
         private void button4_Click(object sender, EventArgs e)
         {
-            if (tbPK.Text == "") 
-            {
-                MessageBox.Show("Укажите мощность котла", "Ошибка");
-                if (tbF.Text == "")
-                {
-                    MessageBox.Show("Укажите площадь ПНК", "Ошибка");
-                    if (tbTf.Text == "")
-                    {
-                        MessageBox.Show("укажите температуру пнк", "ошибка");
-                    }
 
-                }
+            if ((tbF.Text == "") || (tbPK.Text == "") || (tbTf.Text == ""))
+            {
+                MessageBox.Show("Не все поля заполнены", "Ошибка");
+                novisible1();
             }
             else
-            {
-                groupBox3.Visible = true;
-                groupBox4.Visible = true;
-                btnRas.Visible = true;
-            }
-        }  
+                visible1();
+        }
         //обработчик для кнопки "расчет" в меню
         private void рассчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -78,89 +81,61 @@ namespace RK
             //обработчик клика на кнопку расчет
         private void btnRas_Click(object sender, EventArgs e)
         {           
-            if (tbPK.Text == "")
+            if ((tbPK.Text == "") || (tbF.Text == "") || (tbTf.Text == "") || (tbQn.Text == "") || (tbFuel.Text == "") || (tbPb.Text == "") || (tbPair.Text == "") || (tbGwater.Text == "") || (tbCO2.Text == "") || (tbCO.Text == "") || (tbNO2.Text == "") || (tbCH4.Text == "") || (tbYgaz.Text == ""))
             {
-                MessageBox.Show("Укажите мощность котла", "Ошибка");
-                if (tbF.Text == "")
+                MessageBox.Show("Не все поля заполнены", "Ошибка");
+            }   
+            else
+            {
+                calc.Qn = Convert.ToDouble(tbQn.Text);
+                calc.B = Convert.ToDouble(tbFuel.Text);
+                calc.CO2 = Convert.ToDouble(tbCO2.Text);
+                calc.CO = Convert.ToDouble(tbCO.Text);
+                calc.NO2 = Convert.ToDouble(tbNO2.Text);
+                calc.CH4 = Convert.ToDouble(tbCH4.Text);
+                calc.Tr = Convert.ToDouble(tbPb.Text);
+                calc.Tv = Convert.ToDouble(tbPair.Text);
+                calc.F = Convert.ToDouble(tbF.Text);
+                calc.Tf = Convert.ToDouble(tbTf.Text);
+                calc.Tyx = Convert.ToDouble(tbYgaz.Text);
+                calc.Gv = Convert.ToDouble(tbGwater.Text);
+                calc.Qsn = Convert.ToDouble(tbQsn.Text);
+
+                
+
+                calc.Calc();
+
+                TableResult.Add(calc);
+                
+                btnRetry.Visible = true;
+                btnReport.Visible = true;
+                groupBox1.Visible = false;
+                groupBox3.Visible = false;
+                groupBox4.Visible = false;
+                dataResult.Visible = true;
+                
+                dataResult.Left = 25; //X coordinate
+                dataResult.Top = 100; //Y coordinate
+
+                // for (int i = 0; i < dataResult.RowCount; i++)
+                // { }
+                foreach (FirstCalculation i in TableResult)
                 {
-                    MessageBox.Show("Укажите площадь ПНК", "Ошибка");
-                    if (tbTf.Text == "")
-                    {
-                        MessageBox.Show("Укажите температуру ПНК", "Ошибка");
-                        if (tbQn.Text == "")
-                        {
-                            MessageBox.Show("Укажите низшую теплоту сгорания", "Ошибка");
-                            if (tbFuel.Text == "")
-                            {
-                                MessageBox.Show("Укажите расход топлива", "Ошибка");
-                                if (tbPb.Text == "")
-                                {
-                                    MessageBox.Show("Укажите температуру топлива", "Ошибка");
-                                    if (tbPair.Text == "")
-                                    {
-                                        MessageBox.Show("Укажите температуру воздуха", "Ошибка");
-                                        if (tbGwater.Text == "")
-                                        {
-                                            MessageBox.Show("Укажите расход воды", "Ошибка");
-                                            if (tbCO2.Text == "")
-                                            {
-                                                MessageBox.Show("Укажите содержание СО2", "Ошибка");
-                                                if (tbCO.Text == "")
-                                                {
-                                                    MessageBox.Show("Укажите содержание СО", "Ошибка");
-                                                    if (tbNO2.Text == "")
-                                                    {
-                                                        MessageBox.Show("Укажите содержание NO2", "Ошибка");
-                                                        if (tbCH4.Text == "")
-                                                        {
-                                                            MessageBox.Show("Укажите содержание CH4", "Ошибка");
-                                                            if (tbYgaz.Text == "")
-                                                            {
-                                                                MessageBox.Show("Укажите температуру уходящих газов", "Ошибка");
-                                                            }
-                                                            else
-                                                            {
-                                                                calc.Qn = Convert.ToDouble(tbQn.Text);
-                                                                calc.B = Convert.ToDouble(tbFuel.Text);
-                                                                calc.CO2 = Convert.ToDouble(tbCO2.Text);
-                                                                calc.CO = Convert.ToDouble(tbCO.Text);
-                                                                calc.NO2 = Convert.ToDouble(tbNO2.Text);
-                                                                calc.CH4 = Convert.ToDouble(tbCH4.Text);
-                                                                calc.Tr = Convert.ToDouble(tbPb.Text);
-                                                                calc.Tv = Convert.ToDouble(tbPair.Text);
-                                                                calc.F = Convert.ToDouble(tbF.Text);
-                                                                calc.Tf = Convert.ToDouble(tbTf.Text);
-                                                                calc.Tyx = Convert.ToDouble(tbYgaz.Text);
-                                                                calc.Gv = Convert.ToDouble(tbGwater.Text);
-                                                                calc.Qsn = Convert.ToDouble(tbQsn.Text);
+                    dataResult[0, 0].Value = Convert.ToString(i.B);
+                    dataResult[1, 0].Value = Convert.ToString(i.RO2max);
+                    dataResult[2, 0].Value = Convert.ToString(i.Kh);
+                    dataResult[3, 0].Value = Convert.ToString(i.alpha);
+                    dataResult[4, 0].Value = Convert.ToString(i.Vsg);
+                    dataResult[5, 0].Value = Convert.ToString(i.Q2);
+                    dataResult[6, 0].Value = Convert.ToString(i.Q3);
+                    dataResult[7, 0].Value = Convert.ToString(i.Q5);
+                    dataResult[8, 0].Value = Convert.ToString(i.KPDbr1);
+                    dataResult[9, 0].Value = Convert.ToString(i.By);
+                    dataResult[10, 0].Value = Convert.ToString(i.Bysl);
 
-                                                                calc.Qk = Convert.ToDouble(tbPK.Text);
 
-                                                                calc.Calc();
-
-                                                                TableResult.Add(calc);
-
-                                                                btnRetry.Visible = true;
-                                                                btnReport.Visible = true;
-                                                                groupBox1.Visible = false;
-                                                                groupBox3.Visible = false;
-                                                                groupBox4.Visible = false;
-                                                                dataResult.Visible = true;
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
-            }
- 
-            
+            }          
         }
         private void btnRetry_Click(object sender, EventArgs e)
         {
