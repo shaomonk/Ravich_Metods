@@ -20,6 +20,7 @@ namespace RK
         FormAboutProg FormAboutProg = new FormAboutProg(); // new form aboutProg
         FormDataBase FormDataBase = new FormDataBase(); // new form FormDataBase
 
+        public List<FirstCalculation>TableResult= new List<FirstCalculation>();
         // class calculation
         FirstCalculation calc = new FirstCalculation();
         // class interpolation
@@ -51,24 +52,22 @@ namespace RK
             if (tbF.Text == "")
             {
                 MessageBox.Show("Укажите площадь ПНК", "Ошибка");
-                
+                if (tbTf.Text == "")
+                {
+                    MessageBox.Show("Укажите температуру ПНК", "Ошибка");
+                    if (tbPK.Text == "")
+                    {
+                        MessageBox.Show("Укажите мощность котла", "Ошибка");
+                    }
+                    else
+                    {
+                         groupBox3.Visible = true;
+                         groupBox4.Visible = true;
+                         btnRas.Visible = true;
+                    }
+                }
             }
-            if (tbTf.Text == "")
-            {
-                MessageBox.Show("Укажите температуру ПНК", "Ошибка");
-            }
-            if (tbPK.Text == "")
-            {
-                MessageBox.Show("Укажите мощность котла", "Ошибка");
-            }
-            else
-            {
-                groupBox3.Visible = true;
-                groupBox4.Visible = true;
-                btnRas.Visible = true;
-            }
-        }
-        
+        }  
         //обработчик для кнопки "расчет" в меню
         private void рассчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -77,8 +76,7 @@ namespace RK
         }
             //обработчик клика на кнопку расчет
         private void btnRas_Click(object sender, EventArgs e)
-        {
-            
+        {           
             if (tbPK.Text == "")
             {
                 MessageBox.Show("Укажите мощность котла", "Ошибка");
@@ -150,7 +148,8 @@ namespace RK
                 calc.Qk = Convert.ToDouble(tbPK.Text);
 
                 calc.Calc();
-                
+
+                TableResult.Add(calc);
 
                 btnRetry.Visible = true;
                 btnReport.Visible = true;
@@ -158,10 +157,8 @@ namespace RK
                 groupBox3.Visible = false;
                 groupBox4.Visible = false;
                 dataResult.Visible = true;
-            }
-            
+            }          
         }
-
         private void btnRetry_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;

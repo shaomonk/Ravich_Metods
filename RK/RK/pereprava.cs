@@ -9,7 +9,7 @@ namespace RK
     static class pereprava
     {
         // таблица исходных данных
-        static public List<InputTableData> tempTable = new List<InputTableData>();
+        
         // Флаг админа
         static public bool check = false;
         //Переменые вывода данных

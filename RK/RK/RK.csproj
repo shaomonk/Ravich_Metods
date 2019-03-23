@@ -102,7 +102,6 @@
       <DependentUpon>Form_RK.cs</DependentUpon>
     </Compile>
     <Compile Include="Fuel.cs" />
-    <Compile Include="InputTableData.cs" />
     <Compile Include="linterp.cs" />
     <Compile Include="FormDataBase.cs">
       <SubType>Form</SubType>
