@@ -45,29 +45,33 @@ namespace RK
         {
             Close();
         }
+        // видимоть первых
+        void visible1()
+        {
+            groupBox3.Visible = true;
+            groupBox4.Visible = true;
+            btnRas.Visible = true;
+        }
+        // НЕвидимоть первых
+        void novisible1()
+        {
+            groupBox3.Visible = false;
+            groupBox4.Visible = false;
+            btnRas.Visible = false;
+        }
 
         //обработчик клика кнопки далее
         private void button4_Click(object sender, EventArgs e)
         {
-            if (tbF.Text == "")
+
+            if ((tbF.Text == "") || (tbPK.Text == "") || (tbTf.Text == ""))
             {
-                MessageBox.Show("Укажите площадь ПНК", "Ошибка");
-                if (tbTf.Text == "")
-                {
-                    MessageBox.Show("Укажите температуру ПНК", "Ошибка");
-                    if (tbPK.Text == "")
-                    {
-                        MessageBox.Show("Укажите мощность котла", "Ошибка");
-                    }
-                    else
-                    {
-                         groupBox3.Visible = true;
-                         groupBox4.Visible = true;
-                         btnRas.Visible = true;
-                    }
-                }
+                MessageBox.Show("4to-to ne zapolnil, bro", "Ошибка");
+                novisible1();
             }
-        }  
+            else
+                visible1();
+        }
         //обработчик для кнопки "расчет" в меню
         private void рассчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
