@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClosedXML.Excel; // connect bibl
+using System.Xml.Serialization;
 
 
 namespace RK
@@ -19,6 +20,8 @@ namespace RK
         FormSpravka FormSpravka = new FormSpravka(); // new form Spravka
         FormAboutProg FormAboutProg = new FormAboutProg(); // new form aboutProg
         FormDataBase FormDataBase = new FormDataBase(); // new form FormDataBase
+
+        
 
         public List<FirstCalculation>TableResult= new List<FirstCalculation>();
         // class calculation
@@ -76,7 +79,7 @@ namespace RK
         private void рассчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
-            label28.Text = Convert.ToString(dataResult.Rows.Count);
+            
 
         }
             //обработчик клика на кнопку расчет
@@ -113,10 +116,10 @@ namespace RK
                 groupBox1.Visible = false;
                 groupBox3.Visible = false;
                 groupBox4.Visible = false;
-                dataResult.Visible = true;
+                dataResult1.Visible = true;
                 
-                dataResult.Left = 25; //X coordinate
-                dataResult.Top = 100; //Y coordinate
+                dataResult1.Left = 25; //X coordinate
+                dataResult1.Top = 100; //Y coordinate
 
 
 
@@ -148,7 +151,7 @@ namespace RK
             groupBox1.Visible = true;
             groupBox3.Visible = true;
             groupBox4.Visible = true;
-            dataResult.Visible = false;
+            dataResult1.Visible = false;
 
             tbFuel.Clear();
             tbCO2.Clear();
@@ -186,8 +189,11 @@ namespace RK
             var workBook = new ClosedXML.Excel.XLWorkbook(); // new exelFile
             var worksheet = workBook.Worksheets.Add("hellow_file"); // new worlshhet
             
+           
+
             workBook.SaveAs("c:\\helow.xlsx"); // save file
-     
+           
+
         }
 
         private void tbQ_TextChanged(object sender, EventArgs e)
@@ -219,8 +225,9 @@ namespace RK
                 }
         }
 
+      
 
-           
+
     }
     
 }
