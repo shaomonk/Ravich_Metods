@@ -76,7 +76,8 @@ namespace RK
         private void рассчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
- 
+            label28.Text = Convert.ToString(dataResult.Rows.Count);
+
         }
             //обработчик клика на кнопку расчет
         private void btnRas_Click(object sender, EventArgs e)
@@ -117,28 +118,33 @@ namespace RK
                 dataResult.Left = 25; //X coordinate
                 dataResult.Top = 100; //Y coordinate
 
-                // for (int i = 0; i < dataResult.RowCount; i++)
-                // { }
+
+
+               
+                dataResult1.Rows.Add();
+              
                 foreach (FirstCalculation i in TableResult)
                 {
-                    dataResult[0, 0].Value = Convert.ToString(i.B);
-                    dataResult[1, 0].Value = Convert.ToString(i.RO2max);
-                    dataResult[2, 0].Value = Convert.ToString(i.Kh);
-                    dataResult[3, 0].Value = Convert.ToString(i.alpha);
-                    dataResult[4, 0].Value = Convert.ToString(i.Vsg);
-                    dataResult[5, 0].Value = Convert.ToString(i.Q2);
-                    dataResult[6, 0].Value = Convert.ToString(i.Q3);
-                    dataResult[7, 0].Value = Convert.ToString(i.Q5);
-                    dataResult[8, 0].Value = Convert.ToString(i.KPDbr1);
-                    dataResult[9, 0].Value = Convert.ToString(i.By);
-                    dataResult[10, 0].Value = Convert.ToString(i.Bysl);
 
-
+                    dataResult1[0, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.B);
+                        dataResult1[1, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.RO2max);
+                        dataResult1[2, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Kh);
+                        dataResult1[3, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.alpha);
+                        dataResult1[4, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Vsg);
+                        dataResult1[5, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Q2);
+                        dataResult1[6, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Q3);
+                        dataResult1[7, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Q5);
+                        dataResult1[8, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.KPDbr1);
+                        dataResult1[9, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.By);
+                        dataResult1[10, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Bysl);
+            
                 }
+               
             }          
         }
         private void btnRetry_Click(object sender, EventArgs e)
         {
+            
             groupBox1.Visible = true;
             groupBox3.Visible = true;
             groupBox4.Visible = true;
@@ -151,6 +157,9 @@ namespace RK
             tbNO2.Clear();
             
             tbYgaz.Clear();
+
+            
+
         }
 
         private void btnAbout_Click(object sender, EventArgs e)

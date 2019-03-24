@@ -74,24 +74,24 @@ namespace RK
         //коэффициент избытка воздуха
         public double KoefA()
         {
-            return alpha = 1 + (Kh -1) * Kb;
+            return alpha = 1 + (Kh -1) * 0.88;
         }
         // определение объемов продуктов сгорания
         public double PSvozd()
         {
-            return Vsg = (Kh - 1) * 1.86 * C2 / (CO2 + CO);
+            return Vsg = (Kh - 1) * 1.86 * 75 / (CO2 + CO);
         }
 
         // потери Q2
         public double LostQ2()
         {
-            return Q2 = (Tyx - Tv) / (2050 - 30) * (Kc + (Kh - 1) * Kb * Kk);
+            return Q2 = (Tyx - Tv) / (2050 - 30) * (0.85 + (Kh - 1) * 0.88 * 0.79);
         }
 
         // потери Q3
         public double LostQ3()
         {
-            return Q3 = (30.2 * CO + 25.8 * H2 + 85.5 * CH4) * Kh / 8000;
+            return Q3 = (30.2 * CO + 25.8 * 25 + 85.5 * CH4) * Kh / 8000;
         }
 
         // потери Q5

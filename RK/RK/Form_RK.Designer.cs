@@ -116,6 +116,19 @@
             this.boiler_gabarit_steamTableAdapter = new RK.RezhimKardDBTableAdapters.boiler_gabarit_steamTableAdapter();
             this.boilergabaritsteamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter = new RK.RezhimKardDBTableAdapters.boiler_gabarit_water_gaz_zhidkoeTableAdapter();
+            this.label28 = new System.Windows.Forms.Label();
+            this.dataResult1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boilerBindingSource)).BeginInit();
@@ -129,6 +142,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.charzhidkoeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilerboilergabaritsteamBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilergabaritsteamBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataResult1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -139,7 +153,7 @@
             this.контактыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(899, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1087, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -155,14 +169,14 @@
             // рассчетToolStripMenuItem
             // 
             this.рассчетToolStripMenuItem.Name = "рассчетToolStripMenuItem";
-            this.рассчетToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.рассчетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.рассчетToolStripMenuItem.Text = "Расчет";
             this.рассчетToolStripMenuItem.Click += new System.EventHandler(this.рассчетToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -400,10 +414,11 @@
             this.byDataGridViewTextBoxColumn,
             this.byslDataGridViewTextBoxColumn});
             this.dataResult.DataSource = this.resultBindingSource;
-            this.dataResult.Location = new System.Drawing.Point(716, 202);
+            this.dataResult.Location = new System.Drawing.Point(716, 207);
             this.dataResult.Name = "dataResult";
-            this.dataResult.ReadOnly = true;
-            this.dataResult.Size = new System.Drawing.Size(682, 285);
+            this.dataResult.RowHeadersWidth = 25;
+            this.dataResult.RowTemplate.Height = 25;
+            this.dataResult.Size = new System.Drawing.Size(673, 250);
             this.dataResult.TabIndex = 17;
             this.dataResult.Visible = false;
             // 
@@ -412,77 +427,66 @@
             this.calculatiionDataGridViewTextBoxColumn.DataPropertyName = "Calculatiion";
             this.calculatiionDataGridViewTextBoxColumn.HeaderText = "Calculatiion";
             this.calculatiionDataGridViewTextBoxColumn.Name = "calculatiionDataGridViewTextBoxColumn";
-            this.calculatiionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rO2maxDataGridViewTextBoxColumn
             // 
             this.rO2maxDataGridViewTextBoxColumn.DataPropertyName = "RO2max";
             this.rO2maxDataGridViewTextBoxColumn.HeaderText = "RO2max";
             this.rO2maxDataGridViewTextBoxColumn.Name = "rO2maxDataGridViewTextBoxColumn";
-            this.rO2maxDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // khDataGridViewTextBoxColumn
             // 
             this.khDataGridViewTextBoxColumn.DataPropertyName = "Kh";
             this.khDataGridViewTextBoxColumn.HeaderText = "Kh";
             this.khDataGridViewTextBoxColumn.Name = "khDataGridViewTextBoxColumn";
-            this.khDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // alphaDataGridViewTextBoxColumn
             // 
             this.alphaDataGridViewTextBoxColumn.DataPropertyName = "alpha";
             this.alphaDataGridViewTextBoxColumn.HeaderText = "alpha";
             this.alphaDataGridViewTextBoxColumn.Name = "alphaDataGridViewTextBoxColumn";
-            this.alphaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // vsgDataGridViewTextBoxColumn
             // 
             this.vsgDataGridViewTextBoxColumn.DataPropertyName = "Vsg";
             this.vsgDataGridViewTextBoxColumn.HeaderText = "Vsg";
             this.vsgDataGridViewTextBoxColumn.Name = "vsgDataGridViewTextBoxColumn";
-            this.vsgDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // q2DataGridViewTextBoxColumn
             // 
             this.q2DataGridViewTextBoxColumn.DataPropertyName = "Q2";
             this.q2DataGridViewTextBoxColumn.HeaderText = "Q2";
             this.q2DataGridViewTextBoxColumn.Name = "q2DataGridViewTextBoxColumn";
-            this.q2DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // q3DataGridViewTextBoxColumn
             // 
             this.q3DataGridViewTextBoxColumn.DataPropertyName = "Q3";
             this.q3DataGridViewTextBoxColumn.HeaderText = "Q3";
             this.q3DataGridViewTextBoxColumn.Name = "q3DataGridViewTextBoxColumn";
-            this.q3DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // q5DataGridViewTextBoxColumn
             // 
             this.q5DataGridViewTextBoxColumn.DataPropertyName = "Q5";
             this.q5DataGridViewTextBoxColumn.HeaderText = "Q5";
             this.q5DataGridViewTextBoxColumn.Name = "q5DataGridViewTextBoxColumn";
-            this.q5DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // kPDbr1DataGridViewTextBoxColumn
             // 
             this.kPDbr1DataGridViewTextBoxColumn.DataPropertyName = "KPDbr1";
             this.kPDbr1DataGridViewTextBoxColumn.HeaderText = "KPDbr1";
             this.kPDbr1DataGridViewTextBoxColumn.Name = "kPDbr1DataGridViewTextBoxColumn";
-            this.kPDbr1DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // byDataGridViewTextBoxColumn
             // 
             this.byDataGridViewTextBoxColumn.DataPropertyName = "By";
             this.byDataGridViewTextBoxColumn.HeaderText = "By";
             this.byDataGridViewTextBoxColumn.Name = "byDataGridViewTextBoxColumn";
-            this.byDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // byslDataGridViewTextBoxColumn
             // 
             this.byslDataGridViewTextBoxColumn.DataPropertyName = "Bysl";
             this.byslDataGridViewTextBoxColumn.HeaderText = "Bysl";
             this.byslDataGridViewTextBoxColumn.Name = "byslDataGridViewTextBoxColumn";
-            this.byslDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // resultBindingSource
             // 
@@ -883,12 +887,111 @@
             // 
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter.ClearBeforeFill = true;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(548, 55);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(41, 13);
+            this.label28.TabIndex = 18;
+            this.label28.Text = "label28";
+            // 
+            // dataResult1
+            // 
+            this.dataResult1.AllowUserToAddRows = false;
+            this.dataResult1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataResult1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataResult1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11});
+            this.dataResult1.Location = new System.Drawing.Point(36, 463);
+            this.dataResult1.Name = "dataResult1";
+            this.dataResult1.Size = new System.Drawing.Size(859, 150);
+            this.dataResult1.TabIndex = 19;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 73;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 73;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 73;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 73;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 73;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 73;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Column7";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 73;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Column8";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 73;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Column9";
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 73;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Column10";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 79;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Column11";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 79;
+            // 
             // Form_RK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RK.Properties.Resources.fon3;
-            this.ClientSize = new System.Drawing.Size(899, 462);
+            this.ClientSize = new System.Drawing.Size(1087, 558);
+            this.Controls.Add(this.dataResult1);
+            this.Controls.Add(this.label28);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnRetry);
             this.Controls.Add(this.groupBox4);
@@ -921,6 +1024,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.charzhidkoeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilerboilergabaritsteamBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boilergabaritsteamBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataResult1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1015,6 +1119,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn byDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn byslDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource resultBindingSource;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.DataGridView dataResult1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }
 
