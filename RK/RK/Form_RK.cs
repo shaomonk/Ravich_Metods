@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClosedXML.Excel; // connect bibl
 using System.Xml.Serialization;
+using System.Diagnostics;
 
 
 namespace RK
 {
     public partial class Form_RK : Form
     {
+        Timer timer = new Timer();
         Fuel fuel1 = new Fuel();
         FormAboutBD FormAboutBD = new FormAboutBD(); // new form aboutBD
         FormSpravka FormSpravka = new FormSpravka(); // new form Spravka
         FormAboutProg FormAboutProg = new FormAboutProg(); // new form aboutProg
         FormDataBase FormDataBase = new FormDataBase(); // new form FormDataBase
-
         
-
         public List<FirstCalculation>TableResult= new List<FirstCalculation>();
         // class calculation
         FirstCalculation calc = new FirstCalculation();
@@ -41,9 +41,8 @@ namespace RK
         }     
         private void вывестиБДToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormDataBase.ShowDialog();
+            Process.Start("RezhimKardDB.mdb");
         }
-
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
@@ -66,7 +65,6 @@ namespace RK
         //обработчик клика кнопки далее
         private void button4_Click(object sender, EventArgs e)
         {
-
             if ((tbF.Text == "") || (tbPK.Text == "") || (tbTf.Text == ""))
             {
                 MessageBox.Show("Не все поля заполнены", "Ошибка");
@@ -78,9 +76,7 @@ namespace RK
         //обработчик для кнопки "расчет" в меню
         private void рассчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = true;
-            
-
+            groupBox1.Visible = true;        
         }
             //обработчик клика на кнопку расчет
         private void btnRas_Click(object sender, EventArgs e)
@@ -105,8 +101,6 @@ namespace RK
                 calc.Gv = Convert.ToDouble(tbGwater.Text);
                 calc.Qsn = Convert.ToDouble(tbQsn.Text);
 
-                
-
                 calc.Calc();
 
                 TableResult.Add(calc);
@@ -120,16 +114,12 @@ namespace RK
                 
                 dataResult1.Left = 25; //X coordinate
                 dataResult1.Top = 100; //Y coordinate
-
-
-
-               
+            
                 dataResult1.Rows.Add();
               
                 foreach (FirstCalculation i in TableResult)
                 {
-
-                    dataResult1[0, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.B);
+                        dataResult1[0, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.B);
                         dataResult1[1, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.RO2max);
                         dataResult1[2, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Kh);
                         dataResult1[3, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.alpha);
@@ -139,15 +129,12 @@ namespace RK
                         dataResult1[7, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Q5);
                         dataResult1[8, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.KPDbr1);
                         dataResult1[9, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.By);
-                        dataResult1[10, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Bysl);
-            
-                }
-               
+                        dataResult1[10, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Bysl);         
+                }    
             }          
         }
         private void btnRetry_Click(object sender, EventArgs e)
-        {
-            
+        { 
             groupBox1.Visible = true;
             groupBox3.Visible = true;
             groupBox4.Visible = true;
@@ -157,12 +144,8 @@ namespace RK
             tbCO2.Clear();
             tbCO.Clear();
             tbCH4.Clear();
-            tbNO2.Clear();
-            
+            tbNO2.Clear();          
             tbYgaz.Clear();
-
-            
-
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
@@ -170,17 +153,13 @@ namespace RK
          // call form Spravka          
             FormSpravka.ShowDialog();
         }
-
         private void программаToolStripMenuItem_Click(object sender, EventArgs e)
         {
                  FormAboutProg.ShowDialog();        // call this form
         }
-
         private void поискПоБДToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-            FormAboutBD.ShowDialog(); // cal form AboutBD
-            
+        {         
+            FormAboutBD.ShowDialog(); // cal form AboutBD          
         }
 
         private void btnReport_Click(object sender, EventArgs e)
@@ -188,21 +167,16 @@ namespace RK
             
             var workBook = new ClosedXML.Excel.XLWorkbook(); // new exelFile
             var worksheet = workBook.Worksheets.Add("hellow_file"); // new worlshhet
-            
-           
 
             workBook.SaveAs("c:\\helow.xlsx"); // save file
-           
 
         }
-
-        private void tbQ_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form_RK_Load(object sender, EventArgs e)
         {
+            timer.Interval = 1000;
+            timer.Tick += new EventHandler(timer1_Tick);
+            timer.Start();
+
             // TODO: данная строка кода позволяет загрузить данные в таблицу "rezhimKardDB._boiler_gabarit_water_gaz_zhidkoe". При необходимости она может быть перемещена или удалена.
             this.boiler_gabarit_water_gaz_zhidkoeTableAdapter.Fill(this.rezhimKardDB._boiler_gabarit_water_gaz_zhidkoe);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "rezhimKardDB.boiler_gabarit_steam". При необходимости она может быть перемещена или удалена.
@@ -224,10 +198,60 @@ namespace RK
                     e.Handled = true;
                 }
         }
+        private void контактнаяИнформацияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/1bqJOxoknwMKgyILQqtk5YWold98nqMaa-kgsbPSVyxI/edit?usp=drive_web");
+        }
 
-      
+        private void внестиПредложениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/1PaSyGqNStoUHIpx81TzIUvzYzn-Mecx06R-mqbbm0rU/edit?usp=drive_web");
+        }
 
+        private void сообщитьОПроблемеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/1DNl5fXhpGRdSfaPMSXonSeZCNl-C2hGN1vqAEkrror4/edit?usp=drive_web");
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int h = DateTime.Now.Hour;
+            int m = DateTime.Now.Minute;
+            int s = DateTime.Now.Second;
+
+            string time = "";
+            if (h < 10)
+            {
+                time += "0" + h;
+            }
+            else
+            {
+                time += h;
+            }
+
+            time += ":";
+
+            if (m < 10)
+            {
+                time += "0" + m;
+            }
+            else
+            {
+                time += m;
+            }
+
+            time += ":";
+
+            if (s < 10)
+            {
+                time += "0" + s;
+            }
+            else
+            {
+                time += s;
+            }
+            label28.Text = time;
+        }
     }
     
 }

@@ -63,6 +63,16 @@ namespace RK.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fon {
+            get {
+                object obj = ResourceManager.GetObject("fon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fon1 {
             get {
                 object obj = ResourceManager.GetObject("fon1", resourceCulture);
@@ -86,6 +96,16 @@ namespace RK.Properties {
         internal static System.Drawing.Bitmap fon3 {
             get {
                 object obj = ResourceManager.GetObject("fon3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fon5 {
+            get {
+                object obj = ResourceManager.GetObject("fon5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

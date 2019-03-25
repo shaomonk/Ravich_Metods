@@ -35,7 +35,8 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(146, 166);
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnOK.Location = new System.Drawing.Point(253, 189);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(182, 34);
             this.btnOK.TabIndex = 0;
@@ -46,9 +47,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 56);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(445, 65);
+            this.label1.Size = new System.Drawing.Size(662, 100);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
             // 
@@ -56,8 +59,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::RK.Properties.Resources.Nuclear_Recruitment;
-            this.ClientSize = new System.Drawing.Size(479, 244);
+            this.BackgroundImage = global::RK.Properties.Resources.fon5;
+            this.ClientSize = new System.Drawing.Size(683, 244);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
             this.Name = "FormAboutBD";

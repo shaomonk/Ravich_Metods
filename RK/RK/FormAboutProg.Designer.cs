@@ -35,7 +35,8 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(141, 247);
+            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnOk.Location = new System.Drawing.Point(185, 261);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(185, 33);
             this.btnOk.TabIndex = 0;
@@ -46,9 +47,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 47);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(442, 169);
+            this.label1.Size = new System.Drawing.Size(503, 195);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
             // 
@@ -57,7 +60,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RK.Properties.Resources.fon1;
-            this.ClientSize = new System.Drawing.Size(472, 306);
+            this.ClientSize = new System.Drawing.Size(519, 306);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOk);
             this.Name = "FormAboutProg";

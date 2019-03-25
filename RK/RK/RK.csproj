@@ -191,6 +191,8 @@
     <None Include="Resources\fon3.jpg" />
     <None Include="Resources\logo1.jpg" />
     <None Include="Resources\Nuclear_Recruitment.jpg" />
+    <None Include="Resources\fon.jpg" />
+    <None Include="Resources\fon5.jpeg" />
     <Content Include="RezhimKardDB.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
