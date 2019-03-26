@@ -89,6 +89,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -122,10 +126,6 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boilerBindingSource)).BeginInit();
@@ -166,14 +166,14 @@
             // рассчетToolStripMenuItem
             // 
             this.рассчетToolStripMenuItem.Name = "рассчетToolStripMenuItem";
-            this.рассчетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.рассчетToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.рассчетToolStripMenuItem.Text = "Расчет";
             this.рассчетToolStripMenuItem.Click += new System.EventHandler(this.рассчетToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -189,7 +189,7 @@
             // программаToolStripMenuItem
             // 
             this.программаToolStripMenuItem.Name = "программаToolStripMenuItem";
-            this.программаToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.программаToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.программаToolStripMenuItem.Text = "Программа";
             this.программаToolStripMenuItem.Click += new System.EventHandler(this.программаToolStripMenuItem_Click);
             // 
@@ -199,7 +199,7 @@
             this.вывестиБДToolStripMenuItem,
             this.поискПоБДToolStripMenuItem});
             this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
-            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.базаДанныхToolStripMenuItem.Text = "База Данных";
             // 
             // вывестиБДToolStripMenuItem
@@ -708,6 +708,42 @@
             this.groupBox4.Text = "Переменные";
             this.groupBox4.Visible = false;
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(178, 124);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(16, 13);
+            this.label32.TabIndex = 10;
+            this.label32.Text = "%";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(178, 90);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(16, 13);
+            this.label31.TabIndex = 9;
+            this.label31.Text = "%";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(178, 61);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(16, 13);
+            this.label30.TabIndex = 8;
+            this.label30.Text = "%";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(178, 28);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(16, 13);
+            this.label29.TabIndex = 7;
+            this.label29.Text = "%";
+            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -948,42 +984,6 @@
             this.label28.Size = new System.Drawing.Size(150, 44);
             this.label28.TabIndex = 20;
             this.label28.Text = "label28";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(178, 28);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(16, 13);
-            this.label29.TabIndex = 7;
-            this.label29.Text = "%";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(178, 61);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(16, 13);
-            this.label30.TabIndex = 8;
-            this.label30.Text = "%";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(178, 90);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(16, 13);
-            this.label31.TabIndex = 9;
-            this.label31.Text = "%";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(178, 124);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(16, 13);
-            this.label32.TabIndex = 10;
-            this.label32.Text = "%";
             // 
             // Form_RK
             // 

@@ -166,28 +166,41 @@ namespace RK
         {
             
             var workBook = new ClosedXML.Excel.XLWorkbook(); // new exelFile
-            var worksheet = workBook.Worksheets.Add("отчёт"); // new worlshhet
-           // экспорт по ячейкам
-                 foreach (FirstCalculation i in TableResult)
-            {
-                worksheet.Cell("A1").Value = Convert.ToString(i.B);
-                worksheet.Cell("A2").Value = Convert.ToString(i.RO2max);
-                worksheet.Cell("A3").Value = Convert.ToString(i.Kh);
-                worksheet.Cell("A4").Value = Convert.ToString(i.alpha);
-                worksheet.Cell("A5").Value = Convert.ToString(i.Vsg);
-                worksheet.Cell("A6").Value = Convert.ToString(i.Q2);
-                worksheet.Cell("A7").Value = Convert.ToString(i.Q3);
-                worksheet.Cell("A8").Value = Convert.ToString(i.Q5);
-                worksheet.Cell("A9").Value = Convert.ToString(i.KPDbr1);
-                worksheet.Cell("A10").Value = Convert.ToString(i.By);
-                worksheet.Cell("A11").Value = Convert.ToString(i.Bysl);
+            var worksheet = workBook.Worksheets.Add("отчёт "+DateTime.Now.ToString("dd.MM.yyyy")); // new worlshhet
 
-              //  dataResult1[10, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Bysl);
+
+            // экспорт по ячейкам
+
+
+            
+            var col = 2;// столбец 
+
+            foreach (FirstCalculation i in TableResult)
+            {
+                var row = 2;// строка
+
+                // worksheet.Cell(col, row++).Value = Convert.ToString(i.B);
+                
+                MessageBox.Show("col "+col.ToString()+ "row "+row.ToString()+"---------"+ DateTime.Now.ToString("dd.MMMM.yyyy"), "херня собачья");
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.B); // бегаю по столбцам
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.RO2max);
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.Kh);
+               worksheet.Cell(col, row++).Value = Convert.ToString(i.alpha);
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.Vsg);
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.Q2);
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.Q3);
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.Q5);
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.KPDbr1);
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.By);
+                worksheet.Cell(col, row++).Value = Convert.ToString(i.Bysl);
+                col++;  // перешел на новую строку
+
+
+                
             }
 
-
-
-            workBook.SaveAs("c:\\отчёт.xlsx"); // save file
+           
+            workBook.SaveAs("c:\\"+ DateTime.Now.ToString("HH.mm.dd.MM.yyyy") + " режимная карта.xlsx"); // save file
 
         }
         private void Form_RK_Load(object sender, EventArgs e)
