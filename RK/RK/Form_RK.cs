@@ -166,9 +166,28 @@ namespace RK
         {
             
             var workBook = new ClosedXML.Excel.XLWorkbook(); // new exelFile
-            var worksheet = workBook.Worksheets.Add("hellow_file"); // new worlshhet
+            var worksheet = workBook.Worksheets.Add("отчёт"); // new worlshhet
+           // экспорт по ячейкам
+                 foreach (FirstCalculation i in TableResult)
+            {
+                worksheet.Cell("A1").Value = Convert.ToString(i.B);
+                worksheet.Cell("A2").Value = Convert.ToString(i.RO2max);
+                worksheet.Cell("A3").Value = Convert.ToString(i.Kh);
+                worksheet.Cell("A4").Value = Convert.ToString(i.alpha);
+                worksheet.Cell("A5").Value = Convert.ToString(i.Vsg);
+                worksheet.Cell("A6").Value = Convert.ToString(i.Q2);
+                worksheet.Cell("A7").Value = Convert.ToString(i.Q3);
+                worksheet.Cell("A8").Value = Convert.ToString(i.Q5);
+                worksheet.Cell("A9").Value = Convert.ToString(i.KPDbr1);
+                worksheet.Cell("A10").Value = Convert.ToString(i.By);
+                worksheet.Cell("A11").Value = Convert.ToString(i.Bysl);
 
-            workBook.SaveAs("c:\\helow.xlsx"); // save file
+              //  dataResult1[10, dataResult1.Rows.Count - 1].Value = Convert.ToString(i.Bysl);
+            }
+
+
+
+            workBook.SaveAs("c:\\отчёт.xlsx"); // save file
 
         }
         private void Form_RK_Load(object sender, EventArgs e)
